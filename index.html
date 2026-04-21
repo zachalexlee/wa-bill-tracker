@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Washington Legislative Intelligence | Professional Bill Tracking</title>
+    <title>Washington Legislative Intelligence | Top Bills 2025-26</title>
     <style>
         :root {
             --navy: #0a1628;
@@ -33,7 +33,7 @@
         }
 
         body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: var(--gray-100);
             color: var(--gray-800);
             line-height: 1.6;
@@ -48,11 +48,6 @@
             justify-content: space-between;
             align-items: center;
             font-size: 0.875rem;
-        }
-
-        .top-bar a {
-            color: var(--gold);
-            text-decoration: none;
         }
 
         .main-header {
@@ -74,7 +69,6 @@
             color: var(--white);
             font-size: 1.75rem;
             font-weight: 700;
-            letter-spacing: -0.02em;
         }
 
         .logo-section p {
@@ -90,7 +84,6 @@
             padding: 0.5rem 1.25rem;
             border-radius: 6px;
             font-weight: 600;
-            font-size: 0.9rem;
         }
 
         /* Navigation */
@@ -133,7 +126,7 @@
             font-weight: 600;
         }
 
-        /* Stats Bar */
+        /* Stats */
         .stats-bar {
             background: var(--white);
             border-bottom: 1px solid var(--gray-300);
@@ -152,8 +145,8 @@
         .stat-item {
             text-align: center;
             padding: 1rem;
-            border-radius: 8px;
             background: var(--gray-100);
+            border-radius: 8px;
         }
 
         .stat-number {
@@ -165,7 +158,6 @@
         .stat-label {
             font-size: 0.875rem;
             color: var(--gray-500);
-            margin-top: 0.25rem;
         }
 
         /* Filters */
@@ -178,7 +170,6 @@
         .filters-row {
             display: flex;
             gap: 1rem;
-            margin-bottom: 1rem;
             flex-wrap: wrap;
             align-items: center;
         }
@@ -209,14 +200,13 @@
             border-radius: 6px;
             font-weight: 500;
             cursor: pointer;
-            transition: background 0.2s;
         }
 
         .filter-btn:hover {
             background: var(--navy-lighter);
         }
 
-        /* Bill Cards */
+        /* Bills */
         .bills-container {
             max-width: 1400px;
             margin: 0 auto;
@@ -229,7 +219,6 @@
             border-radius: 8px;
             margin-bottom: 1.5rem;
             overflow: hidden;
-            transition: box-shadow 0.2s;
         }
 
         .bill-card:hover {
@@ -282,24 +271,14 @@
             font-weight: 600;
         }
 
-        .status-introduced {
-            background: rgba(108, 117, 125, 0.1);
-            color: var(--gray-600);
-        }
-
-        .status-committee {
-            background: rgba(255, 193, 7, 0.15);
-            color: #856404;
-        }
-
-        .status-passed {
+        .status-signed {
             background: rgba(40, 167, 69, 0.1);
             color: var(--success);
         }
 
-        .status-signed {
-            background: rgba(10, 22, 40, 0.1);
-            color: var(--navy);
+        .status-active {
+            background: rgba(255, 193, 7, 0.15);
+            color: #856404;
         }
 
         .bill-body {
@@ -309,9 +288,7 @@
         .bill-title {
             font-size: 1.1rem;
             font-weight: 600;
-            color: var(--gray-800);
             margin-bottom: 1rem;
-            line-height: 1.5;
         }
 
         .bill-meta {
@@ -337,7 +314,6 @@
 
         .meta-value {
             font-weight: 500;
-            color: var(--gray-800);
         }
 
         .quick-analysis {
@@ -352,9 +328,6 @@
             color: var(--navy);
             font-size: 0.95rem;
             margin-bottom: 0.75rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
         }
 
         .positions {
@@ -381,71 +354,13 @@
         }
 
         .pos-watch {
-            background: rgba(108, 117, 125, 0.08);
-            border: 1px solid rgba(108, 117, 125, 0.2);
+            background: rgba(108, 117, 126, 0.08);
+            border: 1px solid rgba(108, 117, 126, 0.2);
         }
 
         .position-label {
             font-weight: 600;
             margin-bottom: 0.5rem;
-        }
-
-        .timeline {
-            display: flex;
-            align-items: center;
-            gap: 0;
-            margin-top: 1.5rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid var(--gray-300);
-        }
-
-        .timeline-step {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            flex: 1;
-            position: relative;
-        }
-
-        .timeline-step::after {
-            content: '';
-            position: absolute;
-            top: 12px;
-            right: -50%;
-            width: 100%;
-            height: 2px;
-            background: var(--gray-300);
-            z-index: 0;
-        }
-
-        .timeline-step:last-child::after {
-            display: none;
-        }
-
-        .timeline-dot {
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            background: var(--gray-300);
-            border: 3px solid var(--white);
-            position: relative;
-            z-index: 1;
-        }
-
-        .timeline-step.completed .timeline-dot {
-            background: var(--success);
-        }
-
-        .timeline-step.active .timeline-dot {
-            background: var(--gold);
-            box-shadow: 0 0 0 4px rgba(201, 162, 39, 0.2);
-        }
-
-        .timeline-label {
-            font-size: 0.75rem;
-            color: var(--gray-500);
-            margin-top: 0.5rem;
-            text-align: center;
         }
 
         .expand-section {
@@ -464,7 +379,6 @@
             justify-content: center;
             align-items: center;
             gap: 0.5rem;
-            transition: background 0.2s;
         }
 
         .expand-btn:hover {
@@ -501,6 +415,7 @@
             width: 100%;
             border-collapse: collapse;
             margin-top: 0.75rem;
+            background: var(--white);
         }
 
         .stakeholder-table th,
@@ -515,7 +430,7 @@
             color: var(--navy);
             font-size: 0.85rem;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
+            background: var(--gray-200);
         }
 
         .impact-pill {
@@ -580,7 +495,6 @@
             color: var(--gray-600);
         }
 
-        /* Footer */
         .footer {
             background: var(--navy);
             color: var(--gray-400);
@@ -589,12 +503,6 @@
             font-size: 0.875rem;
         }
 
-        .footer a {
-            color: var(--gold);
-            text-decoration: none;
-        }
-
-        /* Responsive */
         @media (max-width: 768px) {
             .header-content {
                 flex-direction: column;
@@ -617,17 +525,13 @@
             .vote-projection {
                 grid-template-columns: 1fr;
             }
-
-            .nav-content {
-                overflow-x: auto;
-            }
         }
     </style>
 </head>
 <body>
     <div class="top-bar">
         <span>Washington State Legislature | 2025-2026 Regular Session</span>
-        <span>Last Updated: <span id="last-updated">April 21, 2026</span></span>
+        <span>Last Updated: April 21, 2026</span>
     </div>
 
     <header class="main-header">
@@ -644,32 +548,29 @@
 
     <nav class="nav-bar">
         <div class="nav-content">
-            <button class="nav-tab active">All Bills</button>
-            <button class="nav-tab">House Bills</button>
-            <button class="nav-tab">Senate Bills</button>
-            <button class="nav-tab">In Committee</button>
-            <button class="nav-tab">On Floor</button>
-            <button class="nav-tab">Passed</button>
-            <button class="nav-tab">Signed</button>
+            <button class="nav-tab active" onclick="filterBills('all')">All Bills</button>
+            <button class="nav-tab" onclick="filterBills('house')">House Bills</button>
+            <button class="nav-tab" onclick="filterBills('senate')">Senate Bills</button>
+            <button class="nav-tab" onclick="filterBills('signed')">Signed into Law</button>
         </div>
     </nav>
 
     <div class="stats-bar">
         <div class="stats-content">
             <div class="stat-item">
-                <div class="stat-number">200</div>
-                <div class="stat-label">Total Bills Tracked</div>
+                <div class="stat-number">10</div>
+                <div class="stat-label">Top Bills Tracked</div>
             </div>
             <div class="stat-item">
-                <div class="stat-number">87</div>
-                <div class="stat-label">In Committee</div>
+                <div class="stat-number">6</div>
+                <div class="stat-label">House Bills</div>
             </div>
             <div class="stat-item">
-                <div class="stat-number">42</div>
-                <div class="stat-label">Passed One Chamber</div>
+                <div class="stat-number">4</div>
+                <div class="stat-label">Senate Bills</div>
             </div>
             <div class="stat-item">
-                <div class="stat-number">12</div>
+                <div class="stat-number">10</div>
                 <div class="stat-label">Signed into Law</div>
             </div>
         </div>
@@ -677,110 +578,99 @@
 
     <div class="filters-section">
         <div class="filters-row">
-            <input type="text" class="search-box" placeholder="Search by bill number, keyword, or sponsor...">
-            <select class="filter-dropdown">
-                <option>All Committees</option>
-                <option>Capital Budget</option>
-                <option>Appropriations</option>
-                <option>Ways & Means</option>
-                <option>Judiciary</option>
+            <input type="text" class="search-box" id="searchInput" placeholder="Search by bill number, keyword, or sponsor..." onkeyup="searchBills()">
+            <select class="filter-dropdown" id="topicFilter" onchange="filterByTopic()">
+                <option value="all">All Topics</option>
+                <option value="housing">Housing</option>
+                <option value="taxes">Taxes</option>
+                <option value="guns">Firearms</option>
+                <option value="healthcare">Healthcare</option>
+                <option value="labor">Labor</option>
+                <option value="transportation">Transportation</option>
+                <option value="business">Business</option>
+                <option value="education">Education</option>
             </select>
-            <select class="filter-dropdown">
-                <option>All Topics</option>
-                <option>Taxation</option>
-                <option>Healthcare</option>
-                <option>Education</option>
-                <option>Environment</option>
-                <option>Labor</option>
-            </select>
-            <button class="filter-btn">🔍 Search</button>
+            <button class="filter-btn" onclick="resetFilters()">Reset</button>
         </div>
     </div>
 
     <div class="bills-container" id="bills-container">
-        <!-- Bill cards will be inserted here -->
+        <!-- Bills loaded dynamically -->
     </div>
 
     <footer class="footer">
-        <p>Data sourced from <a href="https://app.leg.wa.gov">Washington State Legislature</a> | 
-        Updated daily at 6:00 AM PT | 
-        <a href="#">Export Data</a> | 
-        <a href="#">API Access</a></p>
+        <p>Data sourced from <a href="https://app.leg.wa.gov" style="color: var(--gold);">Washington State Legislature</a> |
+        Updated April 2026 |
+        <a href="#" style="color: var(--gold);">Export Data</a></p>
     </footer>
 
     <script>
-        // Bill data will be loaded from JSON
-        const billsData = []; // Populated by build script
-        
+        let billsData = [];
+        let currentFilter = 'all';
+
+        // Load bills data
+        fetch('data/top-bills.json')
+            .then(r => r.json())
+            .then(bills => {
+                billsData = bills;
+                renderBills(bills);
+            })
+            .catch(err => {
+                console.error('Error loading bills:', err);
+                document.getElementById('bills-container').innerHTML =
+                    '<p style="text-align:center;padding:3rem;">Error loading bill data. Please refresh.</p>';
+            });
+
         function renderBills(bills) {
             const container = document.getElementById('bills-container');
+            if (bills.length === 0) {
+                container.innerHTML = '<p style="text-align:center;padding:3rem;color:var(--gray-500)">No bills match your criteria.</p>';
+                return;
+            }
+
             container.innerHTML = bills.map(bill => `
-                <div class="bill-card">
+                <div class="bill-card" data-type="${bill.type.toLowerCase().replace(' ', '-')}" data-status="${bill.status.toLowerCase().replace(/\s+/g, '-')}">
                     <div class="bill-header">
                         <div class="bill-id">
                             <span class="bill-number">${bill.number}</span>
                             <span class="bill-type-badge ${bill.number.startsWith('HB') ? 'type-house' : 'type-senate'}">
-                                ${bill.number.startsWith('HB') ? 'House' : 'Senate'}
+                                ${bill.type}
                             </span>
                         </div>
-                        <span class="status-badge status-${(bill.status || 'introduced').toLowerCase().replace(/\s+/g, '-')}">
-                            ${bill.status || 'Introduced'}
-                        </span>
+                        <span class="status-badge status-signed">${bill.status}</span>
                     </div>
                     <div class="bill-body">
-                        <h3 class="bill-title">${bill.title || 'Title not available'}</h3>
+                        <h3 class="bill-title">${bill.title}</h3>
                         <div class="bill-meta">
                             <div class="meta-block">
                                 <div class="meta-label">Primary Sponsor</div>
-                                <div class="meta-value">${(bill.sponsors && bill.sponsors[0]) || 'Unknown'}</div>
+                                <div class="meta-value">${bill.sponsors[0]}</div>
                             </div>
                             <div class="meta-block">
                                 <div class="meta-label">Committee</div>
-                                <div class="meta-value">${bill.committee || 'TBD'}</div>
+                                <div class="meta-value">${bill.committee}</div>
                             </div>
                             <div class="meta-block">
                                 <div class="meta-label">Last Action</div>
-                                <div class="meta-value">${bill.lastAction || 'Prefiled'}</div>
+                                <div class="meta-value">${bill.lastAction}</div>
                             </div>
                         </div>
                         <div class="quick-analysis">
                             <h4>⚡ Executive Summary</h4>
-                            <p>${bill.summary || 'Analysis pending...'}</p>
+                            <p>${bill.summary}</p>
                             <div class="positions">
                                 <div class="position-box pos-support">
                                     <div class="position-label">✅ Supporting</div>
-                                    ${bill.supporters || 'TBD'}
+                                    ${bill.supporters}
                                 </div>
                                 <div class="position-box pos-oppose">
                                     <div class="position-label">❌ Opposing</div>
-                                    ${bill.opponents || 'TBD'}
+                                    ${bill.opponents}
                                 </div>
                                 <div class="position-box pos-watch">
                                     <div class="position-label">👀 Monitoring</div>
-                                    ${bill.watchers || 'TBD'}
+                                    ${bill.watchers}
                                 </div>
-                            </div>
-                        </div>
-                        <div class="timeline">
-                            <div class="timeline-step completed">
-                                <div class="timeline-dot"></div>
-                                <span class="timeline-label">Introduced</span>
-                            </div>
-                            <div class="timeline-step ${bill.status === 'In Committee' ? 'active' : 'completed'}">
-                                <div class="timeline-dot"></div>
-                                <span class="timeline-label">Committee</span>
-                            </div>
-                            <div class="timeline-step">
-                                <div class="timeline-dot"></div>
-                                <span class="timeline-label">Floor Vote</span>
-                            </div>
-                            <div class="timeline-step">
-                                <div class="timeline-dot"></div>
-                                <span class="timeline-label">Other Chamber</span>
-                            </div>
-                            <div class="timeline-step">
-                                <div class="timeline-dot"></div>
-                                <span class="timeline-label">Governor</span>
                             </div>
                         </div>
                     </div>
@@ -790,20 +680,20 @@
                         </button>
                         <div id="${bill.number.replace(/\s+/g, '')}" class="full-analysis">
                             <div class="analysis-section-title">Bill Text Summary</div>
-                            <p class="analysis-text">${bill.fullSummary || 'Full analysis being prepared...'}</p>
-                            
+                            <p class="analysis-text">${bill.fullSummary}</p>
+
                             <div class="analysis-section-title">Key Provisions</div>
                             <ul class="analysis-text">
-                                ${(bill.provisions || []).map(p => `<li>${p}</li>`).join('')}
+                                ${bill.provisions.map(p => `<li>${p}</li>`).join('')}
                             </ul>
-                            
+
                             <div class="analysis-section-title">Stakeholder Positions</div>
                             <table class="stakeholder-table">
                                 <thead>
                                     <tr><th>Organization</th><th>Position</th><th>Impact</th></tr>
                                 </thead>
                                 <tbody>
-                                    ${(bill.stakeholders || []).map(s => `
+                                    ${bill.stakeholders.map(s => `
                                         <tr>
                                             <td>${s.name}</td>
                                             <td>${s.position}</td>
@@ -812,17 +702,17 @@
                                     `).join('')}
                                 </tbody>
                             </table>
-                            
+
                             <div class="analysis-section-title">Vote Projection</div>
                             <div class="vote-projection">
                                 <div class="vote-box">
                                     <strong>House of Representatives</strong>
                                     <div class="vote-bar-container">
                                         <div class="vote-bar">
-                                            <div class="vote-yes" style="width: ${bill.houseProjection || 60}%"></div>
+                                            <div class="vote-yes" style="width: ${bill.houseProjection}%"></div>
                                         </div>
                                         <div class="vote-info">
-                                            <span>Projected Yes: ${bill.houseProjection || 60}%</span>
+                                            <span>Projected Yes: ${bill.houseProjection}%</span>
                                             <span>58 D / 40 R</span>
                                         </div>
                                     </div>
@@ -831,10 +721,10 @@
                                     <strong>State Senate</strong>
                                     <div class="vote-bar-container">
                                         <div class="vote-bar">
-                                            <div class="vote-yes" style="width: ${bill.senateProjection || 55}%"></div>
+                                            <div class="vote-yes" style="width: ${bill.senateProjection}%"></div>
                                         </div>
                                         <div class="vote-info">
-                                            <span>Projected Yes: ${bill.senateProjection || 55}%</span>
+                                            <span>Projected Yes: ${bill.senateProjection}%</span>
                                             <span>29 D / 20 R</span>
                                         </div>
                                     </div>
@@ -851,14 +741,66 @@
             el.classList.toggle('active');
         }
 
-        // Load and render bills
-        fetch('data/all-bills.json')
-            .then(r => r.json())
-            .then(bills => renderBills(bills))
-            .catch(() => {
-                document.getElementById('bills-container').innerHTML = 
-                    '<p style="text-align:center;padding:3rem;color:var(--gray-500)">Loading bills...</p>';
-            });
+        function filterBills(type) {
+            currentFilter = type;
+            document.querySelectorAll('.nav-tab').forEach(tab => tab.classList.remove('active'));
+            event.target.classList.add('active');
+
+            let filtered = billsData;
+            if (type === 'house') {
+                filtered = billsData.filter(b => b.number.startsWith('HB'));
+            } else if (type === 'senate') {
+                filtered = billsData.filter(b => b.number.startsWith('SB'));
+            } else if (type === 'signed') {
+                filtered = billsData.filter(b => b.status.includes('Signed'));
+            }
+            renderBills(filtered);
+        }
+
+        function searchBills() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const filtered = billsData.filter(bill =>
+                bill.number.toLowerCase().includes(query) ||
+                bill.title.toLowerCase().includes(query) ||
+                bill.sponsors.some(s => s.toLowerCase().includes(query)) ||
+                bill.summary.toLowerCase().includes(query)
+            );
+            renderBills(filtered);
+        }
+
+        function filterByTopic() {
+            const topic = document.getElementById('topicFilter').value;
+            if (topic === 'all') {
+                renderBills(billsData);
+                return;
+            }
+            const topicKeywords = {
+                'housing': ['rent', 'housing', 'landlord', 'tenant'],
+                'taxes': ['tax', 'capital gains', 'estate', 'B&O'],
+                'guns': ['firearm', 'gun', 'permit'],
+                'healthcare': ['medical', 'health', 'debt'],
+                'labor': ['labor', 'union', 'strike', 'unemployment'],
+                'transportation': ['transportation', 'gas tax', 'fuel'],
+                'business': ['business', 'corporation', 'B&O'],
+                'education': ['education', 'school', 'parental']
+            };
+            const keywords = topicKeywords[topic] || [];
+            const filtered = billsData.filter(bill =>
+                keywords.some(kw =>
+                    bill.title.toLowerCase().includes(kw) ||
+                    bill.summary.toLowerCase().includes(kw)
+                )
+            );
+            renderBills(filtered);
+        }
+
+        function resetFilters() {
+            document.getElementById('searchInput').value = '';
+            document.getElementById('topicFilter').value = 'all';
+            document.querySelectorAll('.nav-tab').forEach(tab => tab.classList.remove('active'));
+            document.querySelector('.nav-tab').classList.add('active');
+            renderBills(billsData);
+        }
     </script>
 </body>
 </html>

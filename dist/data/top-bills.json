@@ -1,0 +1,281 @@
+[
+  {
+    "number": "HB 1217",
+    "type": "House Bill",
+    "title": "Concerning rent stabilization by limiting the frequency and amount of rent increases.",
+    "status": "Signed into Law",
+    "sponsors": ["Rep. Emily Alvarado (D-34)"],
+    "committee": "Housing",
+    "lastAction": "Apr 2025: Signed by Governor Ferguson",
+    "summary": "Statewide rent control legislation that caps annual rent increases. Prohibits landlords from raising rent more than once per year and limits the amount of increase. Supporters argue it protects tenants from displacement; opponents warn it will reduce housing supply and discourage new construction.",
+    "supporters": "Tenant advocacy groups, housing justice organizations, low-income advocates",
+    "opponents": "Rental housing associations, real estate developers, small landlords",
+    "watchers": "Municipal governments, affordable housing developers",
+    "provisions": [
+      "Caps annual rent increases",
+      "Limits frequency of rent changes to once per year",
+      "Exemptions for new construction",
+      "Enforcement mechanisms for violations"
+    ],
+    "stakeholders": [
+      {"name": "Washington Low Income Housing Alliance", "position": "Support", "impact": "high"},
+      {"name": "Washington Apartment Association", "position": "Oppose", "impact": "high"},
+      {"name": "National Association of Realtors WA", "position": "Oppose", "impact": "medium"},
+      {"name": "Tenants Union of Washington", "position": "Support", "impact": "high"}
+    ],
+    "houseProjection": 55,
+    "senateProjection": 57,
+    "fullSummary": "This is the most significant housing legislation of the 2025 session. It establishes statewide rent stabilization for the first time in Washington history. The bill passed on party-line votes in both chambers with narrow margins. Legal challenges are expected from property rights groups. Implementation begins January 2026."
+  },
+  {
+    "number": "SB 5813",
+    "type": "Senate Bill", 
+    "title": "Concerning the taxation of capital gains and estates by creating a more progressive rate structure.",
+    "status": "Signed into Law",
+    "sponsors": ["Sen. Claire Wilson (D-30)"],
+    "committee": "Ways & Means",
+    "lastAction": "Apr 2025: Delivered to Governor",
+    "summary": "Increases capital gains tax from 7% to 9.9% on earnings over $1M. Raises estate tax rates up to 15% and lowers exemption threshold. Generates approximately $2.9 billion in new revenue for education funding.",
+    "supporters": "Education funding advocates, labor unions, progressive tax groups",
+    "opponents": "Business associations, wealth managers, estate planners, tech industry",
+    "watchers": "Accountants, financial advisors, family businesses",
+    "provisions": [
+      "Capital gains tax increase to 9.9%",
+      "Estate tax rate increases up to 15%",
+      "Exemption threshold adjustments",
+      "Revenue directed to education legacy trust"
+    ],
+    "stakeholders": [
+      {"name": "Washington Education Association", "position": "Support", "impact": "high"},
+      {"name": "Washington Technology Industry Association", "position": "Oppose", "impact": "high"},
+      {"name": "Seattle Metropolitan Chamber of Commerce", "position": "Oppose", "impact": "medium"},
+      {"name": "Service Employees International Union", "position": "Support", "impact": "high"}
+    ],
+    "houseProjection": 53,
+    "senateProjection": 56,
+    "fullSummary": "Major tax legislation that significantly increases taxes on high earners and estates. The capital gains portion targets tech executives and investors. Estate tax changes affect family farms and businesses. Revenue funds K-12 and higher education. Republicans uniformly opposed; Democrats split on estate tax provisions."
+  },
+  {
+    "number": "HB 1163",
+    "type": "House Bill",
+    "title": "Concerning firearm safety by requiring a permit to purchase firearms.",
+    "status": "Signed into Law",
+    "sponsors": ["Rep. Liz Berry (D-36)"],
+    "committee": "Civil Rights & Judiciary",
+    "lastAction": "Apr 2025: Signed by Governor",
+    "summary": "Requires Washington State Patrol background check and five-year permit for all firearm purchases. Includes safety training requirement and waiting period. One of the most significant gun safety laws in state history.",
+    "supporters": "Gun safety advocates, law enforcement, domestic violence prevention groups",
+    "opponents": "Gun rights groups, Second Amendment advocates, rural gun owners",
+    "watchers": "Firearms dealers, shooting ranges, hunting organizations",
+    "provisions": [
+      "Permit required for all firearm purchases",
+      "Five-year permit validity",
+      "Safety training mandate",
+      "WSP background check system"
+    ],
+    "stakeholders": [
+      {"name": "Alliance for Gun Responsibility", "position": "Support", "impact": "high"},
+      {"name": "National Rifle Association", "position": "Oppose", "impact": "high"},
+      {"name": "Washington State Patrol", "position": "Neutral/Support", "impact": "medium"},
+      {"name": "Washington Arms Collectors", "position": "Oppose", "impact": "medium"}
+    ],
+    "houseProjection": 52,
+    "senateProjection": 54,
+    "fullSummary": "Landmark gun safety legislation creating a permit-to-purchase system. Similar laws exist in only a handful of states. Implementation requires significant WSP infrastructure development. Legal challenges expected on Second Amendment grounds. Takes effect July 2026 with phased implementation."
+  },
+  {
+    "number": "SB 5480",
+    "type": "Senate Bill",
+    "title": "Concerning consumer protection by prohibiting the reporting of medical debt to consumer credit reporting agencies.",
+    "status": "Signed into Law",
+    "sponsors": ["Sen. Emily Alvarado (D-34)"],
+    "committee": "Health & Long Term Care",
+    "lastAction": "Apr 2025: Signed by Governor",
+    "summary": "Prohibits healthcare providers and collection agencies from reporting medical debt to credit bureaus. Protects consumers from credit score damage due to medical expenses. First-in-nation comprehensive medical debt credit protection.",
+    "supporters": "Consumer protection groups, healthcare advocates, patient rights organizations",
+    "opponents": "Debt collection industry, credit reporting agencies, some healthcare providers",
+    "watchers": "Hospitals, insurance companies, credit bureaus",
+    "provisions": [
+      "Prohibition on medical debt credit reporting",
+      "Collection agency restrictions",
+      "Healthcare provider compliance requirements",
+      "Enforcement by Attorney General"
+    ],
+    "stakeholders": [
+      {"name": "WA Community Action Network", "position": "Support", "impact": "high"},
+      {"name": "ACA International (debt collectors)", "position": "Oppose", "impact": "high"},
+      {"name": "Washington Hospital Association", "position": "Neutral", "impact": "medium"},
+      {"name": "AARP Washington", "position": "Support", "impact": "medium"}
+    ],
+    "houseProjection": 58,
+    "senateProjection": 60,
+    "fullSummary": "Nation-leading consumer protection law that removes medical debt from credit reports. Affects approximately 750,000 Washingtonians with medical debt on credit reports. Collection industry argues it reduces payment incentives. Healthcare providers concerned about revenue collection. Implementation January 2026."
+  },
+  {
+    "number": "HB 1213",
+    "type": "House Bill",
+    "title": "Concerning paid family and medical leave by expanding eligibility and benefits.",
+    "status": "Signed into Law",
+    "sponsors": ["Rep. Liz Berry (D-36)"],
+    "committee": "Labor & Workplace Standards",
+    "lastAction": "Apr 2025: Signed by Governor",
+    "summary": "Expands Paid Family and Medical Leave program by eliminating exemptions, lowering eligibility thresholds, and increasing benefits. Adds administrative requirements for employers.",
+    "supporters": "Labor unions, worker advocacy groups, family caregivers",
+    "opponents": "Small business associations, employer groups, chambers of commerce",
+    "watchers": "HR professionals, payroll companies, large employers",
+    "provisions": [
+      "Eliminates small employer exemption",
+      "Lowers hours-worked eligibility threshold",
+      "Increases benefit amounts",
+      "Expands covered family members"
+    ],
+    "stakeholders": [
+      {"name": "AFL-CIO Washington", "position": "Support", "impact": "high"},
+      {"name": "NFIB Washington", "position": "Oppose", "impact": "high"},
+      {"name": "Washington Business Alliance", "position": "Oppose", "impact": "medium"},
+      {"name": "Working Washington", "position": "Support", "impact": "high"}
+    ],
+    "houseProjection": 57,
+    "senateProjection": 58,
+    "fullSummary": "Major expansion of Washington's PFML program, one of the most generous in the nation. Small businesses previously exempt now must participate. Employers face increased administrative burden and payroll costs. Labor groups celebrate as major worker victory. Effective January 2026."
+  },
+  {
+    "number": "SB 5801",
+    "type": "Senate Bill",
+    "title": "Concerning transportation funding by increasing the motor vehicle fuel tax and establishing new fees.",
+    "status": "Signed into Law",
+    "sponsors": ["Sen. Marko Liias (D-21)"],
+    "committee": "Transportation",
+    "lastAction": "Apr 2025: Signed by Governor",
+    "summary": "6-cent per gallon gas tax increase bringing total state tax to 55.4 cents. Adds luxury vehicle tax, tire disposal fee, and automatic 2% annual inflation adjustment. Funds transportation infrastructure projects.",
+    "supporters": "Transportation advocates, infrastructure groups, transit supporters",
+    "opponents": "Anti-tax groups, drivers, rural residents, trucking industry",
+    "watchers": "EV manufacturers, alternative fuel industry, municipal governments",
+    "provisions": [
+      "6-cent gas tax increase",
+      "Luxury vehicle excise tax",
+      "Tire disposal fee",
+      "Automatic annual inflation adjustment"
+    ],
+    "stakeholders": [
+      {"name": "Washington State Transit Association", "position": "Support", "impact": "high"},
+      {"name": "Washington Trucking Associations", "position": "Oppose", "impact": "high"},
+      {"name": "AAA Washington", "position": "Oppose", "impact": "medium"},
+      {"name": "Association of Washington Cities", "position": "Support", "impact": "medium"}
+    ],
+    "houseProjection": 51,
+    "senateProjection": 64,
+    "fullSummary": "Controversial transportation funding package. Gas tax increase hits rural drivers hardest who drive longer distances. Automatic inflation adjustment ensures revenue grows without legislative votes. EV owners largely exempt, creating equity concerns. Funds bridge repairs, highway maintenance, and transit expansion."
+  },
+  {
+    "number": "SB 5041",
+    "type": "Senate Bill",
+    "title": "Concerning unemployment insurance by providing benefits to striking workers.",
+    "status": "Signed into Law",
+    "sponsors": ["Sen. Marcus Riccelli (D-3)"],
+    "committee": "Labor & Commerce",
+    "lastAction": "Apr 2025: Signed by Governor",
+    "summary": "Provides up to 6 weeks of unemployment benefits to workers on strike. Makes Washington one of few states with strike benefits. Significant win for organized labor.",
+    "supporters": "Labor unions, worker advocacy groups, Democratic legislators",
+    "opponents": "Business associations, employer groups, Republicans",
+    "watchers": "Unemployment insurance administrators, HR professionals",
+    "provisions": [
+      "Up to 6 weeks strike benefits",
+      "Eligibility after 2-week waiting period",
+      "UI fund solvency protections",
+      "Exclusion for public safety workers"
+    ],
+    "stakeholders": [
+      {"name": "Washington State Labor Council", "position": "Support", "impact": "high"},
+      {"name": "Association of Washington Business", "position": "Oppose", "impact": "high"},
+      {"name": "Boeing", "position": "Oppose", "impact": "medium"},
+      {"name": "SEIU 775", "position": "Support", "impact": "high"}
+    ],
+    "houseProjection": 53,
+    "senateProjection": 56,
+    "fullSummary": "Historic labor legislation making Washington one of first states to provide strike benefits. Business groups argue it incentivizes strikes and drains UI fund. Labor calls it essential worker protection. Excludes police and firefighters. Takes effect July 2025."
+  },
+  {
+    "number": "HB 2081",
+    "type": "House Bill",
+    "title": "Concerning business and occupation taxes by adjusting rates for certain business activities.",
+    "status": "Signed into Law",
+    "sponsors": ["Rep. Joe Fitzgibbon (D-34)"],
+    "committee": "Finance",
+    "lastAction": "Apr 2025: Signed by Governor",
+    "summary": "Increases B&O tax rates for certain service industries while creating exemptions for others. Targeted tax increase on professional services, tech, and consulting. Part of broader revenue package.",
+    "supporters": "Education funding advocates, progressive groups, labor",
+    "opponents": "Small businesses, service industry, tech sector, professional services",
+    "watchers": "Accountants, tax advisors, business consultants",
+    "provisions": [
+      "B&O rate increases for service categories",
+      "New exemptions for small businesses",
+      "Revenue directed to education",
+      "Phased implementation over 2 years"
+    ],
+    "stakeholders": [
+      {"name": "Washington State Budget & Policy Center", "position": "Support", "impact": "medium"},
+      {"name": "Washington Technology Industry Association", "position": "Oppose", "impact": "high"},
+      {"name": "Washington Society of CPAs", "position": "Neutral", "impact": "medium"},
+      {"name": "Main Street Alliance WA", "position": "Mixed", "impact": "medium"}
+    ],
+    "houseProjection": 50,
+    "senateProjection": 54,
+    "fullSummary": "Complex B&O tax restructuring that increases rates on high-margin service businesses while protecting small businesses. Tech industry particularly affected. Part of $9.4 billion tax package to address budget deficit. Implementation staggered to reduce shock."
+  },
+  {
+    "number": "SB 5006",
+    "type": "Senate Bill",
+    "title": "Concerning corporations by making technical updates to the Washington business corporation act.",
+    "status": "Signed into Law",
+    "sponsors": ["Sen. Jamie Pedersen (D-43)"],
+    "committee": "Labor & Commerce",
+    "lastAction": "Apr 2025: Signed by Governor",
+    "summary": "Technical updates to Washington's corporation and nonprofit acts. Clarifies board committee powers, share issuance procedures, and dissolution voting thresholds. Non-controversial business law update.",
+    "supporters": "Washington State Bar Association, business attorneys, corporations",
+    "opponents": "None significant",
+    "watchers": "Corporate secretaries, compliance officers, business lawyers",
+    "provisions": [
+      "Board committee composition updates",
+      "Share issuance procedure clarifications",
+      "Dissolution voting threshold changes",
+      "Nonprofit governance updates"
+    ],
+    "stakeholders": [
+      {"name": "Washington State Bar Association", "position": "Support", "impact": "high"},
+      {"name": "Washington Business Alliance", "position": "Support", "impact": "low"},
+      {"name": "Secretary of State Office", "position": "Support", "impact": "medium"}
+    ],
+    "houseProjection": 85,
+    "senateProjection": 90,
+    "fullSummary": "Non-controversial technical bill updating corporate statutes. Passed with broad bipartisan support. Recommended by WSBA Business Law Section. Brings Washington law in line with national trends. Effective June 2025."
+  },
+  {
+    "number": "HB 1296",
+    "type": "House Bill",
+    "title": "Concerning parental rights by modifying provisions related to student medical records and school policies.",
+    "status": "Signed into Law",
+    "sponsors": ["Rep. Monica Stonier (D-49)"],
+    "committee": "Education",
+    "lastAction": "Apr 2025: Signed by Governor",
+    "summary": "Modifies voter-approved parental rights initiative (I-2081). Removes parental access to student medical records, allows schools to delay responses to inquiries, and mandates transgender policy alignment with state standards.",
+    "supporters": "Education groups, LGBTQ advocates, student privacy advocates",
+    "opponents": "Parent rights groups, conservative organizations, Let’s Go Washington",
+    "watchers": "School districts, OSPI, parent-teacher associations",
+    "provisions": [
+      "Removes parental medical record access",
+      "Allows school response delays",
+      "Transgender policy state alignment mandate",
+      "OSPI enforcement authority"
+    ],
+    "stakeholders": [
+      {"name": "Washington Education Association", "position": "Support", "impact": "high"},
+      {"name": "Let's Go Washington", "position": "Oppose", "impact": "high"},
+      {"name": "GLSEN Washington", "position": "Support", "impact": "medium"},
+      {"name": "Family Policy Institute of WA", "position": "Oppose", "impact": "high"}
+    ],
+    "houseProjection": 59,
+    "senateProjection": 61,
+    "fullSummary": "Highly controversial bill that modifies voter-approved parental rights law. Democrats argue it protects student privacy and LGBTQ students; Republicans call it subverting voter will. Legal challenges expected. School districts face compliance deadline of September 2025."
+  }
+]
