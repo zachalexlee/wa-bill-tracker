@@ -1,0 +1,15 @@
+{
+  "name": "wa-bill-tracker",
+  "version": "1.0.0",
+  "description": "Washington State legislative bill tracker with lobbyist-grade analysis",
+  "main": "index.html",
+  "scripts": {
+    "fetch": "python3 fetcher.py",
+    "build": "node build.js",
+    "serve": "python3 -m http.server 8080",
+    "update": "npm run fetch && npm run build"
+  },
+  "keywords": ["washington", "legislature", "bills", "lobbying"],
+  "author": "Forza Payments",
+  "license": "MIT"
+}
