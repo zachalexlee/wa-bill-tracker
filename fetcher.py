@@ -76,12 +76,12 @@ class WABillFetcher:
         return bills
     
     def fetch_all_types(self):
-        """Fetch House and Senate bills"""
+        """Fetch House and Senate bills - extended range"""
         all_bills = []
-        # House Bills 1001-1100
-        all_bills.extend(self.fetch_range(1001, 1100, "HB"))
-        # Senate Bills 5001-5100
-        all_bills.extend(self.fetch_range(5001, 5100, "SB"))
+        # House Bills 1001-1200
+        all_bills.extend(self.fetch_range(1001, 1200, "HB"))
+        # Senate Bills 5001-5200
+        all_bills.extend(self.fetch_range(5001, 5200, "SB"))
         return all_bills
     
     def get_bill_text_url(self, bill_number, bill_type="House"):

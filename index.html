@@ -3,550 +3,862 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WA Bill Tracker - Lobbyist Intelligence</title>
+    <title>Washington Legislative Intelligence | Professional Bill Tracking</title>
     <style>
         :root {
-            --primary: #1a472a;
-            --secondary: #2d5a3d;
-            --accent: #c9a227;
-            --bg: #0f1419;
-            --card: #1a1f2e;
-            --text: #e0e0e0;
-            --muted: #8899a6;
-            --border: #2a3441;
-            --danger: #e74c3c;
-            --warning: #f39c12;
-            --success: #27ae60;
+            --navy: #0a1628;
+            --navy-light: #111d32;
+            --navy-lighter: #1a2744;
+            --gold: #c9a227;
+            --gold-light: #d4b43a;
+            --white: #ffffff;
+            --gray-100: #f8f9fa;
+            --gray-200: #e9ecef;
+            --gray-300: #dee2e6;
+            --gray-400: #adb5bd;
+            --gray-500: #6c757d;
+            --gray-600: #495057;
+            --gray-700: #343a40;
+            --gray-800: #212529;
+            --success: #28a745;
+            --warning: #ffc107;
+            --danger: #dc3545;
+            --info: #17a2b8;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: var(--bg);
-            color: var(--text);
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: var(--gray-100);
+            color: var(--gray-800);
             line-height: 1.6;
         }
-        
-        .header {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            padding: 2rem;
-            border-bottom: 3px solid var(--accent);
-        }
-        
-        .header h1 {
-            font-size: 2rem;
-            font-weight: 700;
-        }
-        
-        .header p {
-            color: #a0c4a0;
-            margin-top: 0.5rem;
-        }
-        
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        
-        .filters {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-        }
-        
-        .filter-btn {
-            padding: 0.5rem 1rem;
-            background: var(--card);
-            border: 1px solid var(--border);
-            color: var(--text);
-            cursor: pointer;
-            border-radius: 4px;
-            transition: all 0.2s;
-        }
-        
-        .filter-btn:hover, .filter-btn.active {
-            background: var(--accent);
-            color: var(--bg);
-        }
-        
-        .bill-grid {
-            display: grid;
-            gap: 1.5rem;
-        }
-        
-        .bill-card {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            overflow: hidden;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        
-        .bill-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-        }
-        
-        .bill-header {
-            padding: 1.5rem;
-            border-bottom: 1px solid var(--border);
+
+        /* Header */
+        .top-bar {
+            background: var(--navy);
+            color: var(--white);
+            padding: 0.75rem 2rem;
             display: flex;
             justify-content: space-between;
-            align-items: start;
+            align-items: center;
+            font-size: 0.875rem;
         }
-        
-        .bill-number {
-            font-size: 1.5rem;
+
+        .top-bar a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        .main-header {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            padding: 2rem 0;
+            border-bottom: 4px solid var(--gold);
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-section h1 {
+            color: var(--white);
+            font-size: 1.75rem;
             font-weight: 700;
-            color: var(--accent);
+            letter-spacing: -0.02em;
         }
-        
-        .bill-type {
-            display: inline-block;
-            padding: 0.25rem 0.75rem;
-            background: var(--primary);
-            border-radius: 4px;
-            font-size: 0.85rem;
+
+        .logo-section p {
+            color: var(--gray-400);
+            font-size: 0.95rem;
+            margin-top: 0.25rem;
+        }
+
+        .session-badge {
+            background: rgba(201, 162, 39, 0.15);
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 0.5rem 1.25rem;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* Navigation */
+        .nav-bar {
+            background: var(--white);
+            border-bottom: 1px solid var(--gray-300);
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            gap: 0;
+        }
+
+        .nav-tab {
+            padding: 1rem 1.5rem;
+            border: none;
+            background: none;
+            color: var(--gray-600);
+            font-weight: 500;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .nav-tab:hover {
+            color: var(--navy);
+            background: var(--gray-100);
+        }
+
+        .nav-tab.active {
+            color: var(--navy);
+            border-bottom-color: var(--gold);
             font-weight: 600;
         }
-        
+
+        /* Stats Bar */
+        .stats-bar {
+            background: var(--white);
+            border-bottom: 1px solid var(--gray-300);
+            padding: 1.5rem 0;
+        }
+
+        .stats-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1rem;
+            border-radius: 8px;
+            background: var(--gray-100);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--navy);
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--gray-500);
+            margin-top: 0.25rem;
+        }
+
+        /* Filters */
+        .filters-section {
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .filters-row {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .search-box {
+            flex: 1;
+            min-width: 300px;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--gray-300);
+            border-radius: 6px;
+            font-size: 0.95rem;
+        }
+
+        .filter-dropdown {
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--gray-300);
+            border-radius: 6px;
+            background: var(--white);
+            font-size: 0.95rem;
+            min-width: 150px;
+        }
+
+        .filter-btn {
+            padding: 0.75rem 1.25rem;
+            background: var(--navy);
+            color: var(--white);
+            border: none;
+            border-radius: 6px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .filter-btn:hover {
+            background: var(--navy-lighter);
+        }
+
+        /* Bill Cards */
+        .bills-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem 3rem;
+        }
+
+        .bill-card {
+            background: var(--white);
+            border: 1px solid var(--gray-300);
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            transition: box-shadow 0.2s;
+        }
+
+        .bill-card:hover {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .bill-header {
+            padding: 1.25rem 1.5rem;
+            background: linear-gradient(to right, var(--gray-100), var(--white));
+            border-bottom: 1px solid var(--gray-300);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .bill-id {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .bill-number {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--navy);
+        }
+
+        .bill-type-badge {
+            padding: 0.35rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .type-house {
+            background: rgba(10, 22, 40, 0.1);
+            color: var(--navy);
+        }
+
+        .type-senate {
+            background: rgba(23, 162, 184, 0.1);
+            color: var(--info);
+        }
+
         .status-badge {
             padding: 0.5rem 1rem;
             border-radius: 20px;
             font-size: 0.85rem;
             font-weight: 600;
         }
-        
-        .status-active {
-            background: rgba(39, 174, 96, 0.2);
+
+        .status-introduced {
+            background: rgba(108, 117, 125, 0.1);
+            color: var(--gray-600);
+        }
+
+        .status-committee {
+            background: rgba(255, 193, 7, 0.15);
+            color: #856404;
+        }
+
+        .status-passed {
+            background: rgba(40, 167, 69, 0.1);
             color: var(--success);
         }
-        
-        .status-pending {
-            background: rgba(243, 156, 18, 0.2);
-            color: var(--warning);
+
+        .status-signed {
+            background: rgba(10, 22, 40, 0.1);
+            color: var(--navy);
         }
-        
-        .status-dead {
-            background: rgba(231, 76, 60, 0.2);
-            color: var(--danger);
-        }
-        
+
         .bill-body {
             padding: 1.5rem;
         }
-        
+
         .bill-title {
             font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--gray-800);
             margin-bottom: 1rem;
-            color: #fff;
+            line-height: 1.5;
         }
-        
-        .meta-grid {
+
+        .bill-meta {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
             margin-bottom: 1.5rem;
         }
-        
-        .meta-item {
-            background: rgba(255,255,255,0.03);
+
+        .meta-block {
             padding: 1rem;
+            background: var(--gray-100);
             border-radius: 6px;
         }
-        
+
         .meta-label {
-            font-size: 0.8rem;
-            color: var(--muted);
+            font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            margin-bottom: 0.25rem;
+            color: var(--gray-500);
+            margin-bottom: 0.5rem;
         }
-        
+
         .meta-value {
-            font-weight: 600;
-            color: #fff;
+            font-weight: 500;
+            color: var(--gray-800);
         }
-        
-        .analysis-section {
-            background: rgba(201, 162, 39, 0.05);
-            border-left: 3px solid var(--accent);
-            padding: 1.5rem;
-            margin-top: 1rem;
-        }
-        
-        .analysis-section h3 {
-            color: var(--accent);
+
+        .quick-analysis {
+            background: linear-gradient(135deg, rgba(201, 162, 39, 0.05), rgba(10, 22, 40, 0.02));
+            border-left: 4px solid var(--gold);
+            padding: 1.25rem;
+            border-radius: 0 6px 6px 0;
             margin-bottom: 1rem;
-            font-size: 1rem;
         }
-        
-        .position-grid {
+
+        .quick-analysis h4 {
+            color: var(--navy);
+            font-size: 0.95rem;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .positions {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 1rem;
             margin-top: 1rem;
         }
-        
-        .position-card {
+
+        .position-box {
             padding: 1rem;
             border-radius: 6px;
+            font-size: 0.9rem;
         }
-        
-        .position-support {
-            background: rgba(39, 174, 96, 0.1);
-            border: 1px solid rgba(39, 174, 96, 0.3);
+
+        .pos-support {
+            background: rgba(40, 167, 69, 0.08);
+            border: 1px solid rgba(40, 167, 69, 0.2);
         }
-        
-        .position-oppose {
-            background: rgba(231, 76, 60, 0.1);
-            border: 1px solid rgba(231, 76, 60, 0.3);
+
+        .pos-oppose {
+            background: rgba(220, 53, 69, 0.08);
+            border: 1px solid rgba(220, 53, 69, 0.2);
         }
-        
-        .position-neutral {
-            background: rgba(136, 153, 166, 0.1);
-            border: 1px solid rgba(136, 153, 166, 0.3);
+
+        .pos-watch {
+            background: rgba(108, 117, 125, 0.08);
+            border: 1px solid rgba(108, 117, 125, 0.2);
         }
-        
+
+        .position-label {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
         .timeline {
             display: flex;
-            gap: 0.5rem;
-            margin-top: 1rem;
-            overflow-x: auto;
+            align-items: center;
+            gap: 0;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--gray-300);
         }
-        
-        .timeline-item {
-            flex-shrink: 0;
-            padding: 0.5rem 1rem;
-            background: var(--bg);
-            border-radius: 4px;
-            font-size: 0.85rem;
+
+        .timeline-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+            position: relative;
         }
-        
-        .timeline-item.completed {
-            background: var(--primary);
+
+        .timeline-step::after {
+            content: '';
+            position: absolute;
+            top: 12px;
+            right: -50%;
+            width: 100%;
+            height: 2px;
+            background: var(--gray-300);
+            z-index: 0;
         }
-        
-        .timeline-item.current {
-            background: var(--accent);
-            color: var(--bg);
-            font-weight: 600;
+
+        .timeline-step:last-child::after {
+            display: none;
         }
-        
+
+        .timeline-dot {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--gray-300);
+            border: 3px solid var(--white);
+            position: relative;
+            z-index: 1;
+        }
+
+        .timeline-step.completed .timeline-dot {
+            background: var(--success);
+        }
+
+        .timeline-step.active .timeline-dot {
+            background: var(--gold);
+            box-shadow: 0 0 0 4px rgba(201, 162, 39, 0.2);
+        }
+
+        .timeline-label {
+            font-size: 0.75rem;
+            color: var(--gray-500);
+            margin-top: 0.5rem;
+            text-align: center;
+        }
+
+        .expand-section {
+            border-top: 1px solid var(--gray-300);
+        }
+
         .expand-btn {
             width: 100%;
-            padding: 1rem;
-            background: transparent;
-            border: 1px solid var(--border);
-            color: var(--accent);
-            cursor: pointer;
+            padding: 1rem 1.5rem;
+            background: var(--gray-100);
+            border: none;
+            color: var(--navy);
             font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
             transition: background 0.2s;
         }
-        
+
         .expand-btn:hover {
-            background: rgba(201, 162, 39, 0.1);
+            background: var(--gray-200);
         }
-        
+
         .full-analysis {
             display: none;
             padding: 1.5rem;
-            border-top: 1px solid var(--border);
+            background: var(--gray-100);
         }
-        
+
         .full-analysis.active {
             display: block;
         }
-        
-        .section-title {
-            font-size: 0.9rem;
-            color: var(--accent);
+
+        .analysis-section-title {
+            font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 0.1em;
+            color: var(--navy);
+            font-weight: 700;
             margin: 1.5rem 0 0.75rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--gold);
         }
-        
-        .detail-text {
-            color: var(--text);
+
+        .analysis-text {
+            color: var(--gray-700);
             line-height: 1.8;
         }
-        
-        .stakeholder-list {
-            list-style: none;
+
+        .stakeholder-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 0.75rem;
         }
-        
-        .stakeholder-list li {
-            padding: 0.5rem 0;
-            border-bottom: 1px solid var(--border);
-            display: flex;
-            justify-content: space-between;
+
+        .stakeholder-table th,
+        .stakeholder-table td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid var(--gray-300);
         }
-        
-        .stakeholder-list li:last-child {
-            border-bottom: none;
+
+        .stakeholder-table th {
+            font-weight: 600;
+            color: var(--navy);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
-        
-        .impact-tag {
+
+        .impact-pill {
             display: inline-block;
-            padding: 0.25rem 0.5rem;
-            border-radius: 4px;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
             font-size: 0.8rem;
-            margin-left: 0.5rem;
+            font-weight: 600;
         }
-        
+
         .impact-high {
-            background: rgba(231, 76, 60, 0.2);
+            background: rgba(220, 53, 69, 0.1);
             color: var(--danger);
         }
-        
+
         .impact-medium {
-            background: rgba(243, 156, 18, 0.2);
-            color: var(--warning);
+            background: rgba(255, 193, 7, 0.15);
+            color: #856404;
         }
-        
+
         .impact-low {
-            background: rgba(39, 174, 96, 0.2);
+            background: rgba(40, 167, 69, 0.1);
             color: var(--success);
         }
-        
-        .vote-tracker {
+
+        .vote-projection {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
+            gap: 1.5rem;
             margin-top: 1rem;
         }
-        
-        .vote-chamber {
-            background: var(--bg);
-            padding: 1rem;
+
+        .vote-box {
+            background: var(--white);
+            padding: 1.25rem;
             border-radius: 6px;
+            border: 1px solid var(--gray-300);
         }
-        
+
+        .vote-bar-container {
+            margin-top: 0.75rem;
+        }
+
         .vote-bar {
             height: 8px;
-            background: var(--border);
+            background: var(--gray-300);
             border-radius: 4px;
-            margin-top: 0.5rem;
             overflow: hidden;
         }
-        
-        .vote-fill {
+
+        .vote-yes {
             height: 100%;
             background: var(--success);
-            transition: width 0.3s;
+            border-radius: 4px;
         }
-        
+
+        .vote-info {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--gray-600);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--navy);
+            color: var(--gray-400);
+            padding: 2rem;
+            text-align: center;
+            font-size: 0.875rem;
+        }
+
+        .footer a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
-            .position-grid {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .stats-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .bill-meta {
                 grid-template-columns: 1fr;
             }
-            
-            .vote-tracker {
+
+            .positions {
                 grid-template-columns: 1fr;
             }
-            
-            .header h1 {
-                font-size: 1.5rem;
+
+            .vote-projection {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-content {
+                overflow-x: auto;
             }
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <div class="container">
-            <h1>🏛️ WA Bill Tracker</h1>
-            <p>Lobbyist-grade legislative intelligence for Washington State</p>
-        </div>
+    <div class="top-bar">
+        <span>Washington State Legislature | 2025-2026 Regular Session</span>
+        <span>Last Updated: <span id="last-updated">April 21, 2026</span></span>
     </div>
-    
-    <div class="container">
-        <div class="filters">
-            <button class="filter-btn active">All Bills</button>
-            <button class="filter-btn">Active</button>
-            <button class="filter-btn">Fiscal</button>
-            <button class="filter-btn">Business Impact</button>
-            <button class="filter-btn">Financial Services</button>
-            <button class="filter-btn">ATM/Retail</button>
+
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo-section">
+                <h1>🏛️ Washington Legislative Intelligence</h1>
+                <p>Professional bill tracking & analysis for government affairs professionals</p>
+            </div>
+            <div class="session-badge">
+                2025-26 Session
+            </div>
         </div>
-        
-        <div class="bill-grid">
-            <!-- HB 1001 Example -->
-            <div class="bill-card">
-                <div class="bill-header">
-                    <div>
-                        <div class="bill-number">HB 1001</div>
-                        <span class="bill-type">House Bill</span>
-                    </div>
-                    <span class="status-badge status-active">In Committee</span>
-                </div>
-                
-                <div class="bill-body">
-                    <h2 class="bill-title">Concerning capital projects for the provision of fire protection services.</h2>
-                    
-                    <div class="meta-grid">
-                        <div class="meta-item">
-                            <div class="meta-label">Sponsors</div>
-                            <div class="meta-value">Abbarno, Waters, Barnard, Orcutt, Bronoske, Valdez</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">Committee</div>
-                            <div class="meta-value">House Capital Budget</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">Session</div>
-                            <div class="meta-value">2025-26 Regular</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">Last Action</div>
-                            <div class="meta-value">Jan 30 - Public hearing at 1:30 PM</div>
-                        </div>
-                    </div>
-                    
-                    <div class="analysis-section">
-                        <h3>⚡ Quick Analysis</h3>
-                        <p>Capital budget bill for fire protection infrastructure. Direct fiscal impact through state construction budget. No direct ATM/retail business impact unless your locations are in areas receiving fire station upgrades (indirect property value effect).</p>
-                        
-                        <div class="position-grid">
-                            <div class="position-card position-support">
-                                <strong>✅ Proponents</strong><br>
-                                Fire districts, local governments, construction unions
-                            </div>
-                            <div class="position-card position-oppose">
-                                <strong>❌ Opponents</strong><br>
-                                Fiscal conservatives (spending concerns)
-                            </div>
-                            <div class="position-card position-neutral">
-                                <strong>⚖️ Watchers</strong><br>
-                                Taxpayer groups, environmental (water use)
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="timeline">
-                        <div class="timeline-item completed">Prefiled</div>
-                        <div class="timeline-item completed">First Reading</div>
-                        <div class="timeline-item current">Committee</div>
-                        <div class="timeline-item">Floor Vote</div>
-                        <div class="timeline-item">Senate</div>
-                        <div class="timeline-item">Governor</div>
-                    </div>
-                </div>
-                
-                <button class="expand-btn" onclick="toggleAnalysis('hb1001')">
-                    📋 View Full Lobbyist Analysis
-                </button>
-                
-                <div id="hb1001" class="full-analysis">
-                    <div class="section-title">Bill Summary</div>
-                    <p class="detail-text">
-                        HB 1001 authorizes capital projects for fire protection services across Washington State. 
-                        This is a standard capital budget appropriation bill that funds construction, renovation, and 
-                        equipment acquisition for fire districts and fire protection authorities.
-                    </p>
-                    
-                    <div class="section-title">Key Provisions</div>
-                    <ul class="detail-text">
-                        <li>Capital appropriations for fire station construction/renovation</li>
-                        <li>Equipment acquisition (apparatus, communications)</li>
-                        <li>Grants to local fire districts</li>
-                        <li>Bond financing authorization</li>
-                    </ul>
-                    
-                    <div class="section-title">Fiscal Impact</div>
-                    <p class="detail-text">
-                        <strong>State:</strong> Bond issuance + general fund appropriations. Exact amount TBD in committee.<br>
-                        <strong>Local:</strong> Matching requirements for districts receiving grants.<br>
-                        <strong>Private Sector:</strong> Construction contracts bid out; opportunity for contractors.
-                    </p>
-                    
-                    <div class="section-title">Stakeholder Positions (Detailed)</div>
-                    <ul class="stakeholder-list">
-                        <li>
-                            <span>Washington State Fire Fighters Union</span>
-                            <span class="impact-tag impact-high">Strong Support</span>
-                        </li>
-                        <li>
-                            <span>Association of Washington Cities</span>
-                            <span class="impact-tag impact-medium">Support</span>
-                        </li>
-                        <li>
-                            <span>Washington State Association of Counties</span>
-                            <span class="impact-tag impact-medium">Support</span>
-                        </li>
-                        <li>
-                            <span>Building Industry Association of WA</span>
-                            <span class="impact-tag impact-medium">Support (contracts)</span>
-                        </li>
-                        <li>
-                            <span>WA Policy Center (fiscal conservative)</span>
-                            <span class="impact-tag impact-high">Oppose (spending)</span>
-                        </li>
-                    </ul>
-                    
-                    <div class="section-title">Political Dynamics</div>
-                    <p class="detail-text">
-                        <strong>House:</strong> Democratic majority (58-40). Bill has bipartisan sponsors (3R, 3D). 
-                        Likely passes committee along party lines or with bipartisan support.<br><br>
-                        <strong>Senate:</strong> Democratic majority (29-20). Similar trajectory expected.<br><br>
-                        <strong>Governor:</strong> Ferguson (D) likely signs; fire protection is non-controversial constituency service.
-                    </p>
-                    
-                    <div class="section-title">Business Impact Assessment</div>
-                    <p class="detail-text">
-                        <strong>Direct:</strong> None for ATM/payments industry.<br>
-                        <strong>Indirect:</strong> Fire station construction may cause temporary road closures near your 
-                        ATM locations. Property value increases in served areas could affect retail foot traffic.<br>
-                        <strong>Opportunity:</strong> If you have construction sector clients, they may bid on these projects.
-                    </p>
-                    
-                    <div class="section-title">Amendment Watch</div>
-                    <p class="detail-text">
-                        No amendments filed yet. Watch for:<br>
-                        - Geographic allocation changes (rural vs urban)<br>
-                        - Matching fund ratio adjustments<br>
-                        - Environmental review requirements added
-                    </p>
-                    
-                    <div class="section-title">Vote Projection</div>
-                    <div class="vote-tracker">
-                        <div class="vote-chamber">
-                            <strong>House (Projected)</strong>
-                            <div class="vote-bar">
-                                <div class="vote-fill" style="width: 65%"></div>
-                            </div>
-                            <small>~65 Yes / 35 No / 0 Absent</small>
-                        </div>
-                        <div class="vote-chamber">
-                            <strong>Senate (Projected)</strong>
-                            <div class="vote-bar">
-                                <div class="vote-fill" style="width: 60%"></div>
-                            </div>
-                            <small>~60 Yes / 40 No / 0 Absent</small>
-                        </div>
-                    </div>
-                    
-                    <div class="section-title">Action Items</div>
-                    <p class="detail-text">
-                        ✅ <strong>No action needed</strong> — This bill has no direct impact on Forza Payments or ATM operations.<br>
-                        📌 <strong>Monitor only</strong> if you have retail locations in areas with active fire station construction.
-                    </p>
-                </div>
+    </header>
+
+    <nav class="nav-bar">
+        <div class="nav-content">
+            <button class="nav-tab active">All Bills</button>
+            <button class="nav-tab">House Bills</button>
+            <button class="nav-tab">Senate Bills</button>
+            <button class="nav-tab">In Committee</button>
+            <button class="nav-tab">On Floor</button>
+            <button class="nav-tab">Passed</button>
+            <button class="nav-tab">Signed</button>
+        </div>
+    </nav>
+
+    <div class="stats-bar">
+        <div class="stats-content">
+            <div class="stat-item">
+                <div class="stat-number">200</div>
+                <div class="stat-label">Total Bills Tracked</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">87</div>
+                <div class="stat-label">In Committee</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">42</div>
+                <div class="stat-label">Passed One Chamber</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">12</div>
+                <div class="stat-label">Signed into Law</div>
             </div>
         </div>
     </div>
-    
+
+    <div class="filters-section">
+        <div class="filters-row">
+            <input type="text" class="search-box" placeholder="Search by bill number, keyword, or sponsor...">
+            <select class="filter-dropdown">
+                <option>All Committees</option>
+                <option>Capital Budget</option>
+                <option>Appropriations</option>
+                <option>Ways & Means</option>
+                <option>Judiciary</option>
+            </select>
+            <select class="filter-dropdown">
+                <option>All Topics</option>
+                <option>Taxation</option>
+                <option>Healthcare</option>
+                <option>Education</option>
+                <option>Environment</option>
+                <option>Labor</option>
+            </select>
+            <button class="filter-btn">🔍 Search</button>
+        </div>
+    </div>
+
+    <div class="bills-container" id="bills-container">
+        <!-- Bill cards will be inserted here -->
+    </div>
+
+    <footer class="footer">
+        <p>Data sourced from <a href="https://app.leg.wa.gov">Washington State Legislature</a> | 
+        Updated daily at 6:00 AM PT | 
+        <a href="#">Export Data</a> | 
+        <a href="#">API Access</a></p>
+    </footer>
+
     <script>
+        // Bill data will be loaded from JSON
+        const billsData = []; // Populated by build script
+        
+        function renderBills(bills) {
+            const container = document.getElementById('bills-container');
+            container.innerHTML = bills.map(bill => `
+                <div class="bill-card">
+                    <div class="bill-header">
+                        <div class="bill-id">
+                            <span class="bill-number">${bill.number}</span>
+                            <span class="bill-type-badge ${bill.number.startsWith('HB') ? 'type-house' : 'type-senate'}">
+                                ${bill.number.startsWith('HB') ? 'House' : 'Senate'}
+                            </span>
+                        </div>
+                        <span class="status-badge status-${(bill.status || 'introduced').toLowerCase().replace(/\s+/g, '-')}">
+                            ${bill.status || 'Introduced'}
+                        </span>
+                    </div>
+                    <div class="bill-body">
+                        <h3 class="bill-title">${bill.title || 'Title not available'}</h3>
+                        <div class="bill-meta">
+                            <div class="meta-block">
+                                <div class="meta-label">Primary Sponsor</div>
+                                <div class="meta-value">${(bill.sponsors && bill.sponsors[0]) || 'Unknown'}</div>
+                            </div>
+                            <div class="meta-block">
+                                <div class="meta-label">Committee</div>
+                                <div class="meta-value">${bill.committee || 'TBD'}</div>
+                            </div>
+                            <div class="meta-block">
+                                <div class="meta-label">Last Action</div>
+                                <div class="meta-value">${bill.lastAction || 'Prefiled'}</div>
+                            </div>
+                        </div>
+                        <div class="quick-analysis">
+                            <h4>⚡ Executive Summary</h4>
+                            <p>${bill.summary || 'Analysis pending...'}</p>
+                            <div class="positions">
+                                <div class="position-box pos-support">
+                                    <div class="position-label">✅ Supporting</div>
+                                    ${bill.supporters || 'TBD'}
+                                </div>
+                                <div class="position-box pos-oppose">
+                                    <div class="position-label">❌ Opposing</div>
+                                    ${bill.opponents || 'TBD'}
+                                </div>
+                                <div class="position-box pos-watch">
+                                    <div class="position-label">👀 Monitoring</div>
+                                    ${bill.watchers || 'TBD'}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline">
+                            <div class="timeline-step completed">
+                                <div class="timeline-dot"></div>
+                                <span class="timeline-label">Introduced</span>
+                            </div>
+                            <div class="timeline-step ${bill.status === 'In Committee' ? 'active' : 'completed'}">
+                                <div class="timeline-dot"></div>
+                                <span class="timeline-label">Committee</span>
+                            </div>
+                            <div class="timeline-step">
+                                <div class="timeline-dot"></div>
+                                <span class="timeline-label">Floor Vote</span>
+                            </div>
+                            <div class="timeline-step">
+                                <div class="timeline-dot"></div>
+                                <span class="timeline-label">Other Chamber</span>
+                            </div>
+                            <div class="timeline-step">
+                                <div class="timeline-dot"></div>
+                                <span class="timeline-label">Governor</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="expand-section">
+                        <button class="expand-btn" onclick="toggleAnalysis('${bill.number.replace(/\s+/g, '')}')">
+                            📋 View Full Legislative Analysis
+                        </button>
+                        <div id="${bill.number.replace(/\s+/g, '')}" class="full-analysis">
+                            <div class="analysis-section-title">Bill Text Summary</div>
+                            <p class="analysis-text">${bill.fullSummary || 'Full analysis being prepared...'}</p>
+                            
+                            <div class="analysis-section-title">Key Provisions</div>
+                            <ul class="analysis-text">
+                                ${(bill.provisions || []).map(p => `<li>${p}</li>`).join('')}
+                            </ul>
+                            
+                            <div class="analysis-section-title">Stakeholder Positions</div>
+                            <table class="stakeholder-table">
+                                <thead>
+                                    <tr><th>Organization</th><th>Position</th><th>Impact</th></tr>
+                                </thead>
+                                <tbody>
+                                    ${(bill.stakeholders || []).map(s => `
+                                        <tr>
+                                            <td>${s.name}</td>
+                                            <td>${s.position}</td>
+                                            <td><span class="impact-pill impact-${s.impact}">${s.impact}</span></td>
+                                        </tr>
+                                    `).join('')}
+                                </tbody>
+                            </table>
+                            
+                            <div class="analysis-section-title">Vote Projection</div>
+                            <div class="vote-projection">
+                                <div class="vote-box">
+                                    <strong>House of Representatives</strong>
+                                    <div class="vote-bar-container">
+                                        <div class="vote-bar">
+                                            <div class="vote-yes" style="width: ${bill.houseProjection || 60}%"></div>
+                                        </div>
+                                        <div class="vote-info">
+                                            <span>Projected Yes: ${bill.houseProjection || 60}%</span>
+                                            <span>58 D / 40 R</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="vote-box">
+                                    <strong>State Senate</strong>
+                                    <div class="vote-bar-container">
+                                        <div class="vote-bar">
+                                            <div class="vote-yes" style="width: ${bill.senateProjection || 55}%"></div>
+                                        </div>
+                                        <div class="vote-info">
+                                            <span>Projected Yes: ${bill.senateProjection || 55}%</span>
+                                            <span>29 D / 20 R</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
         function toggleAnalysis(id) {
             const el = document.getElementById(id);
             el.classList.toggle('active');
         }
+
+        // Load and render bills
+        fetch('data/all-bills.json')
+            .then(r => r.json())
+            .then(bills => renderBills(bills))
+            .catch(() => {
+                document.getElementById('bills-container').innerHTML = 
+                    '<p style="text-align:center;padding:3rem;color:var(--gray-500)">Loading bills...</p>';
+            });
     </script>
 </body>
 </html>

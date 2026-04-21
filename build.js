@@ -1,67 +1,50 @@
 const fs = require('fs');
 const path = require('path');
 
-// Read all bill data files
 const dataDir = path.join(__dirname, 'data');
 const files = fs.readdirSync(dataDir).filter(f => f.endsWith('.json'));
 
 let allBills = [];
 files.forEach(file => {
-    const data = JSON.parse(fs.readFileSync(path.join(dataDir, file)));
-    allBills = allBills.concat(data);
+    try {
+        const data = JSON.parse(fs.readFileSync(path.join(dataDir, file)));
+        allBills = allBills.concat(data);
+    } catch (e) {
+        console.log(`Skipping ${file}: ${e.message}`);
+    }
 });
 
-// Generate bill cards HTML
-function generateBillCards() {
-    return allBills.map(bill => {
-        const billNum = bill.number || 'Unknown';
-        const title = bill.title || 'Title not available';
-        const status = bill.status || 'Unknown';
-        const sponsors = bill.sponsors ? bill.sponsors.join(', ') : 'No sponsors listed';
-        
-        // Determine status class
-        let statusClass = 'status-pending';
-        if (status.includes('Pass') || status.includes('Signed')) statusClass = 'status-active';
-        if (status.includes('Dead') || status.includes('Failed')) statusClass = 'status-dead';
-        
-        return `
-            <div class="bill-card">
-                <div class="bill-header">
-                    <div>
-                        <div class="bill-number">${billNum}</div>
-                        <span class="bill-type">${billNum.startsWith('HB') ? 'House Bill' : 'Senate Bill'}</span>
-                    </div>
-                    <span class="status-badge ${statusClass}">${status}</span>
-                </div>
-                <div class="bill-body">
-                    <h2 class="bill-title">${title}</h2>
-                    <div class="meta-grid">
-                        <div class="meta-item">
-                            <div class="meta-label">Sponsors</div>
-                            <div class="meta-value">${sponsors}</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">Status</div>
-                            <div class="meta-value">${status}</div>
-                        </div>
-                    </div>
-                    <button class="expand-btn" onclick="alert('Full analysis coming soon for ${billNum}')">
-                        📋 View Analysis
-                    </button>
-                </div>
-            </div>
-        `;
-    }).join('\n');
+// Remove duplicates by bill number
+const seen = new Set();
+allBills = allBills.filter(bill => {
+    const key = bill.number || bill.bill_number || '';
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+});
+
+// Save merged data
+const outputFile = path.join(dataDir, 'all-bills.json');
+fs.writeFileSync(outputFile, JSON.stringify(allBills, null, 2));
+console.log(`Merged ${allBills.length} unique bills to ${outputFile}`);
+
+// Copy to dist
+const distDir = path.join(__dirname, 'dist');
+if (!fs.existsSync(distDir)) {
+    fs.mkdirSync(distDir, { recursive: true });
 }
 
-// Read template
-let html = fs.readFileSync(path.join(__dirname, 'index.html'), 'utf8');
+// Copy index.html
+fs.copyFileSync(
+    path.join(__dirname, 'index.html'),
+    path.join(distDir, 'index.html')
+);
 
-// Replace the single demo bill with all bills
-const billCards = generateBillCards();
-const billGridRegex = /<div class="bill-grid">[\s\S]*?<\/div>\s*<\/div>\s*<\/div>/;
-html = html.replace(/<div class="bill-grid">[\s\S]*?<\/div>\s*<\/div>\s*<\/div>/, `<div class="bill-grid">\n${billCards}\n</div>`);
+// Copy data
+const distDataDir = path.join(distDir, 'data');
+if (!fs.existsSync(distDataDir)) {
+    fs.mkdirSync(distDataDir, { recursive: true });
+}
+fs.copyFileSync(outputFile, path.join(distDataDir, 'all-bills.json'));
 
-// Write updated HTML
-fs.writeFileSync(path.join(__dirname, 'dist', 'index.html'), html);
-console.log(`Built site with ${allBills.length} bills`);
+console.log('Build complete. Files ready in dist/');
