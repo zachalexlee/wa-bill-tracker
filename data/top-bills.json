@@ -251,31 +251,535 @@
     "fullSummary": "Non-controversial technical bill updating corporate statutes. Passed with broad bipartisan support. Recommended by WSBA Business Law Section. Brings Washington law in line with national trends. Effective June 2025."
   },
   {
-    "number": "HB 1296",
+    "number": "HB 1155",
     "type": "House Bill",
-    "title": "Concerning parental rights by modifying provisions related to student medical records and school policies.",
+    "title": "Concerning noncompetition agreements by prohibiting them and clarifying nonsolicitation agreements.",
     "status": "Signed into Law",
-    "sponsors": ["Rep. Monica Stonier (D-49)"],
-    "committee": "Education",
+    "sponsors": ["Rep. Marcus Riccelli (D-3)"],
+    "committee": "Labor & Workplace Standards",
     "lastAction": "Apr 2025: Signed by Governor",
-    "summary": "Modifies voter-approved parental rights initiative (I-2081). Removes parental access to student medical records, allows schools to delay responses to inquiries, and mandates transgender policy alignment with state standards.",
-    "supporters": "Education groups, LGBTQ advocates, student privacy advocates",
-    "opponents": "Parent rights groups, conservative organizations, Let’s Go Washington",
-    "watchers": "School districts, OSPI, parent-teacher associations",
+    "summary": "Expands Washington's existing noncompete ban to cover nearly all workers regardless of income level. Clarifies that nonsolicitation agreements are not noncompetes. Makes Washington the most restrictive state on noncompetition agreements.",
+    "supporters": "Labor unions, worker advocacy groups, tech workers",
+    "opponents": "Business associations, employers, trade secret advocates",
+    "watchers": "HR professionals, employment attorneys, startups",
     "provisions": [
-      "Removes parental medical record access",
-      "Allows school response delays",
-      "Transgender policy state alignment mandate",
-      "OSPI enforcement authority"
+      "Bans noncompetes for all workers regardless of income",
+      "Clarifies nonsolicitation agreements are permissible",
+      "Strengthens enforcement mechanisms",
+      "Retroactive application to existing agreements"
+    ],
+    "stakeholders": [
+      {"name": "Working Washington", "position": "Support", "impact": "high"},
+      {"name": "Washington Technology Industry Association", "position": "Oppose", "impact": "high"},
+      {"name": "Washington State Bar Association (Labor Section)", "position": "Support", "impact": "medium"},
+      {"name": "Association of Washington Business", "position": "Oppose", "impact": "high"}
+    ],
+    "houseProjection": 69,
+    "senateProjection": 70,
+    "fullSummary": "Major expansion of Washington's already-strong noncompete ban. Previously only banned for workers under $100k; now covers all workers. Tech industry particularly concerned about talent retention and trade secret protection. Business groups argue it makes Washington uncompetitive for headquarters. Labor groups call it essential worker mobility protection. Effective June 2025 with retroactive voiding of existing agreements."
+  },
+  {
+    "number": "SB 5375",
+    "type": "Senate Bill",
+    "title": "Concerning child abuse and neglect by requiring clergy to report instances.",
+    "status": "Signed into Law",
+    "sponsors": ["Sen. Claire Wilson (D-30)"],
+    "committee": "Human Services",
+    "lastAction": "Apr 2025: Signed by Governor",
+    "summary": "Removes clergy-penitent privilege exemption from mandatory child abuse reporting laws. Requires religious leaders to report suspected abuse regardless of confession context. Significant change to religious liberty landscape.",
+    "supporters": "Child advocacy groups, survivors organizations, prosecutors",
+    "opponents": "Religious organizations, Catholic Church, some evangelical groups",
+    "watchers": "Civil liberties groups, family law attorneys",
+    "provisions": [
+      "Removes clergy-penitent privilege exemption",
+      "Mandatory reporting for all religious leaders",
+      "Criminal penalties for failure to report",
+      "Training requirements for clergy"
+    ],
+    "stakeholders": [
+      {"name": "Children's Alliance", "position": "Support", "impact": "high"},
+      {"name": "Washington State Catholic Conference", "position": "Oppose", "impact": "high"},
+      {"name": "ACLU of Washington", "position": "Mixed", "impact": "medium"},
+      {"name": "Survivors Network of those Abused by Priests", "position": "Support", "impact": "high"}
+    ],
+    "houseProjection": 56,
+    "senateProjection": 58,
+    "fullSummary": "Controversial bill removing clergy confession privilege for child abuse reporting. Washington was one of few states with this exemption. Religious groups argue it violates First Amendment and sacramental confidentiality. Child advocates say no institution should shield abusers. Legal challenges expected on religious freedom grounds. Effective immediately upon signing."
+  },
+  {
+    "number": "HB 1171",
+    "type": "House Bill",
+    "title": "Concerning mandated reporting by exempting attorney higher-education employees.",
+    "status": "Signed into Law",
+    "sponsors": ["Rep. Roger Goodman (D-45)"],
+    "committee": "Civil Rights & Judiciary",
+    "lastAction": "Apr 2025: Signed by Governor",
+    "summary": "Creates exception to mandated child abuse reporting for attorneys employed by higher education institutions and their supervised staff. Protects attorney-client privilege in campus legal services.",
+    "supporters": "Washington State Bar Association, university legal services, higher ed institutions",
+    "opponents": "Child advocacy groups (partial), some prosecutors",
+    "watchers": "University administrators, campus legal clinics",
+    "provisions": [
+      "Exemption for higher-ed attorneys",
+      "Extends to supervised staff",
+      "Limited to client representation contexts",
+      "Sunset review after 3 years"
+    ],
+    "stakeholders": [
+      {"name": "Washington State Bar Association", "position": "Support", "impact": "high"},
+      {"name": "University of Washington", "position": "Support", "impact": "medium"},
+      {"name": "Children's Alliance", "position": "Neutral", "impact": "low"},
+      {"name": "Washington Association of Prosecuting Attorneys", "position": "Mixed", "impact": "medium"}
+    ],
+    "houseProjection": 72,
+    "senateProjection": 75,
+    "fullSummary": "Narrow exemption to mandated reporting for campus attorneys. Protects attorney-client privilege when students seek legal advice through university services. Child advocates initially concerned but negotiated sunset clause. Non-controversial after amendments. Supported by all major universities. Effective July 2025."
+  },
+  {
+    "number": "SB 5686",
+    "type": "Senate Bill",
+    "title": "Concerning foreclosure mediation by expanding the program and establishing funding.",
+    "status": "Signed into Law",
+    "sponsors": ["Sen. Jamie Pedersen (D-43)"],
+    "committee": "Financial Institutions & Insurance",
+    "lastAction": "Apr 2025: Delivered to Governor",
+    "summary": "Expands foreclosure mediation program to include condominium association assessment delinquencies. Creates $80 fee on mortgage originations to fund program. Significant expansion of homeowner protections.",
+    "supporters": "Housing advocates, consumer protection groups, condo associations",
+    "opponents": "Mortgage industry, lenders, some real estate groups",
+    "watchers": "HOA management companies, title insurers, housing counselors",
+    "provisions": [
+      "Expands mediation to condo assessment delinquencies",
+      "$80 mortgage origination fee",
+      "Revised funding distributions",
+      "Mediation timeline modifications"
+    ],
+    "stakeholders": [
+      {"name": "Washington State Housing Finance Commission", "position": "Support", "impact": "high"},
+      {"name": "Mortgage Bankers Association", "position": "Oppose", "impact": "high"},
+      {"name": "Community Associations Institute", "position": "Support", "impact": "medium"},
+      {"name": "Washington Realtors", "position": "Neutral", "impact": "medium"}
+    ],
+    "houseProjection": 58,
+    "senateProjection": 62,
+    "fullSummary": "Expands Washington's nationally recognized foreclosure mediation program to condo owners facing assessment liens. New $80 fee on mortgage originations generates approximately $12M annually for program. Mortgage industry opposes fee as increasing borrowing costs. Housing advocates say it prevents displacement. Effective January 2026."
+  },
+  {
+    "number": "HB 1620",
+    "type": "House Bill",
+    "title": "Concerning limitations in parenting plans by reorganizing and revising provisions.",
+    "status": "Signed into Law",
+    "sponsors": ["Rep. Liz Berry (D-36)"],
+    "committee": "Civil Rights & Judiciary",
+    "lastAction": "Apr 2025: Signed by Governor",
+    "summary": "Reorganizes and revises provisions governing limitations in parenting plans. Updates residential time, decision-making authority, and dispute resolution standards. Significant family law update.",
+    "supporters": "Family law attorneys, WSBA Family Law Section, domestic violence advocates",
+    "opponents": "Fathers' rights groups (partial), some shared parenting advocates",
+    "watchers": "Guardians ad litem, family court judges, mediators",
+    "provisions": [
+      "Reorganized parenting plan limitations",
+      "Updated residential time standards",
+      "Decision-making authority revisions",
+      "Dispute resolution modifications"
+    ],
+    "stakeholders": [
+      {"name": "WSBA Family Law Section", "position": "Support", "impact": "high"},
+      {"name": "Washington Coalition Against Domestic Violence", "position": "Support", "impact": "high"},
+      {"name": "Washington Fathers' Rights Movement", "position": "Mixed", "impact": "medium"},
+      {"name": "Washington Association of Family Mediators", "position": "Support", "impact": "medium"}
+    ],
+    "houseProjection": 65,
+    "senateProjection": 68,
+    "fullSummary": "Technical but significant update to Washington's parenting plan statutes. Reorganizes complex provisions for clarity. Domestic violence advocates supported enhanced protections. Some fathers' rights groups concerned about bias in residential time limitations. Family law bar heavily involved in drafting. Effective June 2025."
+  },
+  {
+    "number": "SB 5027",
+    "type": "Senate Bill",
+    "title": "Concerning public defense by establishing a loan repayment program for attorneys.",
+    "status": "In Committee (Carryover)",
+    "sponsors": ["Sen. Jamie Pedersen (D-43)"],
+    "committee": "Higher Education & Workforce Development",
+    "lastAction": "Apr 2025: Did not advance - carryover to 2026",
+    "summary": "Creates law school loan repayment program for public defenders and prosecutors. Subject to qualifying employment obligations. Addresses public defense attorney shortage crisis.",
+    "supporters": "Public defense advocates, prosecutors, law schools, WSBA",
+    "opponents": "Fiscal conservatives (cost concerns)",
+    "watchers": "County governments, Office of Public Defense, law students",
+    "provisions": [
+      "Loan repayment up to $50,000",
+      "3-year employment commitment",
+      "WSAC administration",
+      "Priority for underserved counties"
+    ],
+    "stakeholders": [
+      {"name": "Washington Defender Association", "position": "Support", "impact": "high"},
+      {"name": "Washington Association of Prosecuting Attorneys", "position": "Support", "impact": "high"},
+      {"name": "University of Washington School of Law", "position": "Support", "impact": "medium"},
+      {"name": "Washington State Association of Counties", "position": "Mixed", "impact": "medium"}
+    ],
+    "houseProjection": 55,
+    "senateProjection": 58,
+    "fullSummary": "Bipartisan-supported bill addressing public defense attorney shortage. Washington faces crisis in indigent defense representation. Loan repayment modeled after successful teacher programs. Counties concerned about matching requirements. Did not advance in 2025 but carryover to 2026 session expected. Funding source still being negotiated."
+  },
+  {
+    "number": "HB 1404",
+    "type": "House Bill",
+    "title": "Concerning public schools by providing free breakfast and lunch to all students.",
+    "status": "In Committee (Carryover)",
+    "sponsors": ["Rep. Sharon Tomiko Santos (D-37)"],
+    "committee": "Education",
+    "lastAction": "Apr 2025: Did not advance - carryover to 2026",
+    "summary": "Universal free school meals program for all K-12 public school students regardless of income. Estimated cost $150-200 million annually. Major education funding initiative.",
+    "supporters": "Education advocates, hunger relief groups, teachers unions, parents",
+    "opponents": "Fiscal conservatives, some rural districts (implementation concerns)",
+    "watchers": "School districts, OSPI, food service providers",
+    "provisions": [
+      "Free breakfast for all students",
+      "Free lunch for all students",
+      "State reimbursement to districts",
+      "Nutritional standards compliance"
     ],
     "stakeholders": [
       {"name": "Washington Education Association", "position": "Support", "impact": "high"},
-      {"name": "Let's Go Washington", "position": "Oppose", "impact": "high"},
-      {"name": "GLSEN Washington", "position": "Support", "impact": "medium"},
-      {"name": "Family Policy Institute of WA", "position": "Oppose", "impact": "high"}
+      {"name": "Food Lifeline", "position": "Support", "impact": "high"},
+      {"name": "Washington State School Directors Association", "position": "Mixed", "impact": "medium"},
+      {"name": "Washington Policy Center", "position": "Oppose", "impact": "medium"}
     ],
-    "houseProjection": 59,
-    "senateProjection": 61,
-    "fullSummary": "Highly controversial bill that modifies voter-approved parental rights law. Democrats argue it protects student privacy and LGBTQ students; Republicans call it subverting voter will. Legal challenges expected. School districts face compliance deadline of September 2025."
+    "houseProjection": 52,
+    "senateProjection": 55,
+    "fullSummary": "High-profile bill for universal free school meals. Several states have implemented similar programs with positive results. Washington currently provides free meals to about 45% of students based on income eligibility. Full universal program would cost estimated $150-200M annually. School districts concerned about kitchen capacity and staffing. Strong parental support. Expected to be reintroduced in 2026."
+  },
+  {
+    "number": "SB 5434",
+    "type": "Senate Bill",
+    "title": "Concerning emergency powers by establishing legislative oversight of gubernatorial declarations.",
+    "status": "In Committee (Carryover)",
+    "sponsors": ["Sen. Mark Schoesler (R-9)"],
+    "committee": "State Government & Tribal Relations",
+    "lastAction": "Apr 2025: Did not advance - carryover to 2026",
+    "summary": "Requires legislative approval for gubernatorial emergency declarations extending beyond 30 days. Creates oversight mechanism for prolonged emergency orders. Republican priority response to COVID-19 extended orders.",
+    "supporters": "Republican caucus, limited government groups, business associations",
+    "opponents": "Democratic caucus, governor's office, public health advocates",
+    "watchers": "Emergency management professionals, constitutional scholars",
+    "provisions": [
+      "30-day limit on emergency declarations",
+      "Legislative approval required for extension",
+      "Bicameral oversight committee",
+      "Sunset of existing emergency orders"
+    ],
+    "stakeholders": [
+      {"name": "Washington State Republican Party", "position": "Support", "impact": "high"},
+      {"name": "Governor's Office", "position": "Oppose", "impact": "high"},
+      {"name": "Washington State Emergency Management Association", "position": "Mixed", "impact": "medium"},
+      {"name": "Freedom Foundation", "position": "Support", "impact": "medium"}
+    ],
+    "houseProjection": 42,
+    "senateProjection": 45,
+    "fullSummary": "Partisan bill responding to Governor Inslee's extended COVID-19 emergency orders. Republicans argue separation of powers requires legislative oversight; Democrats say it hamstrings emergency response. Similar laws exist in other states with mixed results. Governor's office strongly opposes. Unlikely to advance with Democratic majorities but remains Republican priority. Expected reintroduction in 2026."
+  },
+  {
+    "number": "HB 1132",
+    "type": "House Bill",
+    "title": "Concerning firearms by enhancing public safety and limiting bulk purchases.",
+    "status": "In Committee (Carryover)",
+    "sponsors": ["Rep. Liz Berry (D-36)"],
+    "committee": "Civil Rights & Judiciary",
+    "lastAction": "Apr 2025: Did not advance - carryover to 2026",
+    "summary": "Limits bulk firearm purchases to one per month and restricts ammunition sales. Builds on HB 1163 permit system. Most restrictive firearm purchase limits in nation if passed.",
+    "supporters": "Gun safety advocates, domestic violence prevention groups, urban law enforcement",
+    "opponents": "Gun rights groups, Second Amendment advocates, rural sheriffs",
+    "watchers": "Firearms dealers, shooting sports groups, constitutional scholars",
+    "provisions": [
+      "One firearm purchase per month limit",
+      "Ammunition purchase tracking",
+      "Enhanced background check requirements",
+      "Exemptions for hunting licenses"
+    ],
+    "stakeholders": [
+      {"name": "Alliance for Gun Responsibility", "position": "Support", "impact": "high"},
+      {"name": "National Rifle Association", "position": "Oppose", "impact": "high"},
+      {"name": "Washington Council of Police and Sheriffs", "position": "Mixed", "impact": "medium"},
+      {"name": "Washington Arms Collectors", "position": "Oppose", "impact": "medium"}
+    ],
+    "houseProjection": 50,
+    "senateProjection": 52,
+    "fullSummary": "Companion bill to HB 1163 creating most restrictive firearm purchase limits in US. One-gun-per-month rule similar to California's old law. Ammunition tracking raises privacy concerns. Hunting exemptions included to reduce rural opposition. Did not advance in 2025 but expected strong push in 2026. Legal challenges certain if passed."
+  },
+  {
+    "number": "SB 5067",
+    "type": "Senate Bill",
+    "title": "Concerning driving under the influence by lowering the blood alcohol concentration limit.",
+    "status": "In Committee (Carryover)",
+    "sponsors": ["Sen. John Lovick (D-44)"],
+    "committee": "Law & Justice",
+    "lastAction": "Apr 2025: Did not advance - carryover to 2026",
+    "summary": "Lowers DUI blood alcohol limit from 0.08 to 0.05, matching Utah's standard. Would make Washington second state with lower limit. Significant criminal law and public safety change.",
+    "supporters": "Mothers Against Drunk Driving, traffic safety advocates, some law enforcement",
+    "opponents": "Restaurant industry, hospitality groups, some rural legislators",
+    "watchers": "Defense attorneys, liquor control board, tourism industry",
+    "provisions": [
+      "BAC limit lowered to 0.05",
+      "Enhanced penalties for 0.08+",
+      "Public education campaign funding",
+      "Utah-style implementation timeline"
+    ],
+    "stakeholders": [
+      {"name": "Mothers Against Drunk Driving WA", "position": "Support", "impact": "high"},
+      {"name": "Washington Restaurant Association", "position": "Oppose", "impact": "high"},
+      {"name": "Washington State Patrol", "position": "Support", "impact": "medium"},
+      {"name": "Washington Association of Criminal Defense Lawyers", "position": "Mixed", "impact": "medium"}
+    ],
+    "houseProjection": 48,
+    "senateProjection": 50,
+    "fullSummary": "Would make Washington second state after Utah with 0.05 BAC limit. MADD strongly supports based on Utah's 20% DUI reduction. Hospitality industry concerned about impact on restaurant/bar business. Utah's law includes tiered penalties that this bill adopts. Some law enforcement concerned about increased arrest volume. Bipartisan interest but stalled over implementation concerns. Expected 2026 reintroduction."
+  },
+  {
+    "number": "HB 1859",
+    "type": "House Bill",
+    "title": "Concerning affordable housing by expanding opportunities on religious organization properties.",
+    "status": "Signed into Law",
+    "sponsors": ["Rep. Mia Gregerson (D-33)"],
+    "committee": "Housing",
+    "lastAction": "Apr 2025: Signed by Governor",
+    "summary": "Allows religious organizations to build affordable housing on their property with streamlined zoning. Addresses housing shortage by unlocking underutilized religious land. Bipartisan-supported housing solution.",
+    "supporters": "Religious organizations, affordable housing developers, zoning reform advocates",
+    "opponents": "Some neighborhood groups (density concerns), limited opposition",
+    "watchers": "Municipal governments, planning departments, faith-based nonprofits",
+    "provisions": [
+      "Streamlined zoning for religious land",
+      "Affordable housing requirement",
+      "Local government coordination",
+      "Property tax considerations"
+    ],
+    "stakeholders": [
+      {"name": "Faith Action Network", "position": "Support", "impact": "high"},
+      {"name": "Washington Low Income Housing Alliance", "position": "Support", "impact": "high"},
+      {"name": "Association of Washington Cities", "position": "Mixed", "impact": "medium"},
+      {"name": "Washington Realtors", "position": "Support", "impact": "low"}
+    ],
+    "houseProjection": 94,
+    "senateProjection": 96,
+    "fullSummary": "Bipartisan housing bill with broad support. Religious organizations own significant land in urban areas suitable for housing. Streamlined zoning reduces development costs and time. Local governments retain some oversight. Similar laws in California and other states showing success. Effective June 2025."
+  },
+  {
+    "number": "HB 1903",
+    "type": "House Bill",
+    "title": "Concerning energy assistance by establishing a statewide low-income program.",
+    "status": "Signed into Law",
+    "sponsors": ["Rep. Beth Doglio (D-22)"],
+    "committee": "Environment & Energy",
+    "lastAction": "Apr 2025: Signed by Governor",
+    "summary": "Creates statewide low-income energy assistance program funded by utility assessments. Helps households with electricity, heating, and weatherization costs. Addresses energy burden on low-income families.",
+    "supporters": "Environmental justice groups, utility consumer advocates, low-income advocates",
+    "opponents": "Some utilities (cost pass-through concerns), business groups",
+    "watchers": "Utility companies, Commerce Department, community action agencies",
+    "provisions": [
+      "Utility-funded assistance program",
+      "Income-based eligibility",
+      "Weatherization services included",
+      "Commerce Department administration"
+    ],
+    "stakeholders": [
+      {"name": "Front and Centered", "position": "Support", "impact": "high"},
+      {"name": "Puget Sound Energy", "position": "Mixed", "impact": "medium"},
+      {"name": "NW Energy Coalition", "position": "Support", "impact": "high"},
+      {"name": "Association of Washington Business", "position": "Mixed", "impact": "low"}
+    ],
+    "houseProjection": 62,
+    "senateProjection": 65,
+    "fullSummary": "Addresses energy burden where low-income households pay disproportionate income on utilities. Funded by small assessment on utilities passed to ratepayers. Similar programs exist federally but this creates state-level safety net. Utilities concerned about ratepayer impact but generally cooperative. Environmental justice groups strongly support. Effective January 2026 with phased implementation."
+  },
+  {
+    "number": "SB 6091",
+    "type": "Senate Bill",
+    "title": "Concerning real estate by prohibiting exclusive marketing of residential properties.",
+    "status": "Signed into Law",
+    "sponsors": ["Sen. Jamie Pedersen (D-43)"],
+    "committee": "Housing",
+    "lastAction": "Apr 2025: Signed by Governor",
+    "summary": "Prohibits real estate brokers from marketing properties to exclusive buyer groups. Aims to increase housing access and prevent discriminatory practices. Response to 'pocket listing' concerns.",
+    "supporters": "Fair housing advocates, buyer agents, consumer protection groups",
+    "opponents": "Luxury real estate brokers, some seller agents",
+    "watchers": "Real estate licensing board, MLS providers, fair housing attorneys",
+    "provisions": [
+      "Prohibition on exclusive marketing",
+      "MLS listing requirements",
+      "Broker disclosure obligations",
+      "Enforcement by Real Estate Commission"
+    ],
+    "stakeholders": [
+      {"name": "Fair Housing Center of Washington", "position": "Support", "impact": "high"},
+      {"name": "Washington Realtors", "position": "Mixed", "impact": "medium"},
+      {"name": "National Association of Realtors", "position": "Oppose", "impact": "medium"},
+      {"name": "Washington State Real Estate Commission", "position": "Support", "impact": "medium"}
+    ],
+    "houseProjection": 85,
+    "senateProjection": 88,
+    "fullSummary": "Addresses 'pocket listings' and exclusive marketing that can limit housing access. Requires properties to be publicly listed within certain timeframe. Luxury market most affected. National Realtors association opposed but state chapter neutral after amendments. Fair housing groups strongly support for increasing access. Effective July 2025."
+  },
+  {
+    "number": "HB 1717",
+    "type": "House Bill",
+    "title": "Concerning affordable housing by creating a sales and use tax remittance program.",
+    "status": "Signed into Law",
+    "sponsors": ["Rep. Strom Peterson (D-21)"],
+    "committee": "Finance",
+    "lastAction": "Apr 2025: Signed by Governor",
+    "summary": "Creates sales tax remittance program for affordable housing developers. Provides financial incentive for building low-income housing units. Part of broader housing affordability package.",
+    "supporters": "Affordable housing developers, housing advocates, local governments",
+    "opponents": "Anti-tax groups, some fiscal conservatives",
+    "watchers": "Revenue Department, housing authorities, developers",
+    "provisions": [
+      "Sales tax remittance for qualifying projects",
+      "Income-restricted unit requirements",
+      "Application and approval process",
+      "Annual program caps"
+    ],
+    "stakeholders": [
+      {"name": "Washington Low Income Housing Alliance", "position": "Support", "impact": "high"},
+      {"name": "Washington State Budget & Policy Center", "position": "Support", "impact": "medium"},
+      {"name": "Washington Policy Center", "position": "Oppose", "impact": "low"},
+      {"name": "Association of General Contractors", "position": "Support", "impact": "medium"}
+    ],
+    "houseProjection": 68,
+    "senateProjection": 70,
+    "fullSummary": "Financial incentive tool for affordable housing development. Similar programs in other states have increased low-income unit production. Revenue impact estimated at $15-20M annually. Developers must meet strict affordability requirements. Part of comprehensive housing package with HB 1217 and HB 1859. Effective January 2026."
+  },
+  {
+    "number": "SB 5831",
+    "type": "Senate Bill",
+    "title": "Concerning mortgages by enacting the uniform mortgage modification act.",
+    "status": "Signed into Law",
+    "sponsors": ["Sen. Marko Liias (D-21)"],
+    "committee": "Financial Institutions & Insurance",
+    "lastAction": "Apr 2025: Signed by Governor",
+    "summary": "Adopts uniform mortgage modification act to streamline loan modification process. Reduces paperwork and legal costs for homeowners seeking mortgage relief. Non-controversial banking law update.",
+    "supporters": "Banking industry, consumer advocates, housing counselors",
+    "opponents": "None significant",
+    "watchers": "Mortgage servicers, legal aid organizations, title companies",
+    "provisions": [
+      "Uniform modification procedures",
+      "Reduced documentation requirements",
+      "Servicer notification standards",
+      "Borrower protection provisions"
+    ],
+    "stakeholders": [
+      {"name": "Washington Bankers Association", "position": "Support", "impact": "high"},
+      {"name": "Washington State Housing Finance Commission", "position": "Support", "impact": "medium"},
+      {"name": "Northwest Justice Project", "position": "Support", "impact": "medium"},
+      {"name": "Mortgage Bankers Association", "position": "Support", "impact": "medium"}
+    ],
+    "houseProjection": 95,
+    "senateProjection": 98,
+    "fullSummary": "Non-controversial uniform act adoption. Streamlines mortgage modification process that currently varies by lender. Reduces legal costs for homeowners in distress. Banking industry supports standardization. Consumer advocates support borrower protections included. Passed unanimously in Senate. Effective June 2025."
+  },
+  {
+    "number": "HB 1170",
+    "type": "House Bill",
+    "title": "Concerning artificial intelligence by requiring disclosure of AI-generated content.",
+    "status": "In Committee (Carryover)",
+    "sponsors": ["Rep. Vandana Slatter (D-48)"],
+    "committee": "Innovation, Technology & Economic Development",
+    "lastAction": "Apr 2025: Did not advance - carryover to 2026",
+    "summary": "Requires disclosure when AI is used to create or modify content presented to users. Applies to political ads, consumer media, and public communications. First-in-nation comprehensive AI disclosure law.",
+    "supporters": "Tech ethics groups, consumer protection advocates, election integrity groups",
+    "opponents": "Tech industry, AI companies, some media organizations",
+    "watchers": "ACLU, tech startups, advertising industry",
+    "provisions": [
+      "AI content disclosure requirements",
+      "Political ad labeling mandate",
+      "Consumer media transparency",
+      "Attorney General enforcement"
+    ],
+    "stakeholders": [
+      {"name": "Tech Equity Coalition", "position": "Support", "impact": "high"},
+      {"name": "Washington Technology Industry Association", "position": "Oppose", "impact": "high"},
+      {"name": "Washington State ACLU", "position": "Mixed", "impact": "medium"},
+      {"name": "Washington State Association of Broadcasters", "position": "Mixed", "impact": "medium"}
+    ],
+    "houseProjection": 54,
+    "senateProjection": 56,
+    "fullSummary": "Pioneering AI transparency legislation. Would be first comprehensive state law requiring AI disclosure. Tech industry concerned about compliance burden and definition challenges. Election integrity groups support political ad provisions. Did not advance in 2025 due to complex drafting issues but expected high priority in 2026 as AI concerns grow."
+  },
+  {
+    "number": "SB 5993",
+    "type": "Senate Bill",
+    "title": "Concerning medical debt by lowering the interest rate and improving consumer protections.",
+    "status": "Signed into Law",
+    "sponsors": ["Sen. Emily Alvarado (D-34)"],
+    "committee": "Health & Long Term Care",
+    "lastAction": "Apr 2025: Signed by Governor",
+    "summary": "Lowers interest rate on medical debt from 12% to 6%. Expands consumer protections in medical debt collection. Companion to SB 5480 credit reporting ban. Comprehensive medical debt reform.",
+    "supporters": "Consumer protection groups, healthcare advocates, patient rights organizations",
+    "opponents": "Debt collection industry, some healthcare providers",
+    "watchers": "Hospitals, credit bureaus, financial counselors",
+    "provisions": [
+      "Medical debt interest rate cap at 6%",
+      "Collection practice restrictions",
+      "Payment plan requirements",
+      "Charity care notification"
+    ],
+    "stakeholders": [
+      {"name": "WA Community Action Network", "position": "Support", "impact": "high"},
+      {"name": "ACA International (debt collectors)", "position": "Oppose", "impact": "high"},
+      {"name": "Washington State Hospital Association", "position": "Mixed", "impact": "medium"},
+      {"name": "AARP Washington", "position": "Support", "impact": "medium"}
+    ],
+    "houseProjection": 60,
+    "senateProjection": 62,
+    "fullSummary": "Companion bill to SB 5480 completing medical debt reform package. Interest rate reduction saves consumers millions annually. Collection industry argues it reduces payment incentives. Hospitals concerned about revenue impact but generally cooperative. Part of national trend in medical debt reform. Effective January 2026."
+  },
+  {
+    "number": "HB 1687",
+    "type": "House Bill",
+    "title": "Concerning social housing by creating public development authorities.",
+    "status": "Signed into Law",
+    "sponsors": ["Rep. Frank Chopp (D-43)"],
+    "committee": "Housing",
+    "lastAction": "Apr 2025: Signed by Governor",
+    "summary": "Creates framework for social housing public development authorities. Allows cities to establish non-profit housing developers with public oversight. Inspired by Vienna and Singapore models.",
+    "supporters": "Housing advocates, progressive groups, some municipal governments",
+    "opponents": "Real estate developers, some property rights groups, fiscal conservatives",
+    "watchers": "Municipal governments, housing authorities, urban planners",
+    "provisions": [
+      "Public development authority creation",
+      "Non-profit housing development",
+      "Public oversight requirements",
+      "Mixed-income unit mandates"
+    ],
+    "stakeholders": [
+      {"name": "Housing Development Consortium", "position": "Support", "impact": "high"},
+      {"name": "Master Builders Association of King/Snohomish", "position": "Oppose", "impact": "high"},
+      {"name": "City of Seattle", "position": "Support", "impact": "high"},
+      {"name": "Washington Policy Center", "position": "Oppose", "impact": "medium"}
+    ],
+    "houseProjection": 58,
+    "senateProjection": 60,
+    "fullSummary": "Innovative housing policy creating public development authorities modeled after successful European and Asian programs. Seattle expected to be first adopter. Real estate developers concerned about competition and market distortion. Progressives see it as essential tool for housing crisis. Implementation depends on local government adoption. Effective June 2025."
+  },
+  {
+    "number": "HB 2111",
+    "type": "House Bill",
+    "title": "Concerning transportation by allowing I-5 bridge replacement toll bond earnings.",
+    "status": "Signed into Law",
+    "sponsors": ["Rep. Jake Fey (D-27)"],
+    "committee": "Transportation",
+    "lastAction": "Apr 2025: Signed by Governor",
+    "summary": "Technical fix allowing I-5 bridge replacement toll facility bond retirement account to receive investment earnings. Supports major Columbia River crossing infrastructure project. Non-controversial transportation funding.",
+    "supporters": "Transportation advocates, Oregon-Washington bridge coalition, local governments",
+    "opponents": "None significant",
+    "watchers": "Toll ratepayers, freight industry, bi-state commission",
+    "provisions": [
+      "Bond retirement account earnings",
+      "I-5 bridge replacement funding",
+      "Toll revenue management",
+      "Bi-state coordination"
+    ],
+    "stakeholders": [
+      {"name": "Oregon-Washington Bridge Coalition", "position": "Support", "impact": "high"},
+      {"name": "Washington State Department of Transportation", "position": "Support", "impact": "high"},
+      {"name": "Port of Vancouver", "position": "Support", "impact": "medium"},
+      {"name": "American Trucking Associations", "position": "Support", "impact": "low"}
+    ],
+    "houseProjection": 95,
+    "senateProjection": 96,
+    "fullSummary": "Technical funding fix for critical I-5 bridge replacement project. Columbia River crossing is major regional priority. Earnings provision maximizes bond funding efficiency. Passed with near-unanimous support. Part of larger transportation package including SB 5801 gas tax. Effective immediately."
   }
 ]
